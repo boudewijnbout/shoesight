@@ -1,0 +1,31 @@
+{
+  "id": "homepage",
+  "label": "Homepage",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "highlights_slice": { "type": "SharedSlice" },
+            "funstuff_slice": { "type": "SharedSlice" },
+            "nieuw_slice": { "type": "SharedSlice" }
+          }
+        }
+      }
+    },
+    "SEO": {
+      "meta_title": {
+        "type": "Text",
+        "config": { "label": "meta_title", "placeholder": "" }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": { "label": "meta_description", "placeholder": "" }
+      }
+    }
+  }
+}
