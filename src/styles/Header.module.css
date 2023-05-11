@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@500&family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 10rem;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo h1 {
+  font-family: "Cormorant", serif;
+  font-size: 3rem;
+}
+
+.logo h2 {
+  color: red;
+  font-family: "Satisfy", cursive;
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+.nav {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navItems {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+}
+
+.nav ul li:first-child {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.links {
+  display: flex;
+
+  gap: 2rem;
+  list-style: none;
+}
+
+.linkTitle {
+  text-decoration: none;
+  color: black;
+  font-family: "Poppins", sans-serif;
+}
+
+.searchbar {
+  border: 1px solid #e5e5e5;
+  height: 1.5rem;
+  width: 12rem;
+  padding-left: 0.5rem;
+  border-radius: 3px;
+}
+
+@media (max-width: 40rem) {
+  .logo h1 {
+    font-size: 2rem;
+  }
+  .logo h2 {
+    font-size: 1rem;
+  }
+
+  .nav ul li:first-child {
+    display: none;
+  }
+
+  .navItems {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .links {
+    display: none;
+  }
+}
