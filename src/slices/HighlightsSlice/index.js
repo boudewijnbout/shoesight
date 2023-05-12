@@ -1,7 +1,7 @@
 /**
- * @typedef {import("@prismicio/client").Content.HighlightsSliceSlice} HighlightsSliceSlice
- * @typedef {import("@prismicio/react").SliceComponentProps<HighlightsSliceSlice>} HighlightsSliceProps
- * @param {HighlightsSliceProps}
+ * @typedef {import("@prismicio/client").Content.NieuwSliceSlice} NieuwSliceSlice
+ * @typedef {import("@prismicio/react").SliceComponentProps<NieuwSliceSlice>} NieuwSliceProps
+ * @param {NieuwSliceProps}
  */
 const HighlightsSlice = ({ slice }) => {
   return (
