@@ -1,4 +1,4 @@
-import classes from "../src/styles/Header.module.css";
+import classes from "../../src/styles/Header.module.css";
 
 function Searchbar() {
   return (

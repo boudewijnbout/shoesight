@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@500&family=Satisfy&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 .header {
   display: flex;
   justify-content: space-around;
@@ -47,11 +48,49 @@
   gap: 0.5rem;
 }
 
-.links {
+.linkContainer {
   display: flex;
-
+  text-decoration: none;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  cursor: default;
   gap: 2rem;
   list-style: none;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem 0;
+}
+
+.link:hover > .dropdownItems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 52px;
+}
+
+.dropdownItems {
+  display: none;
+  list-style: none;
+  padding: 0rem 1rem;
+  width: 13rem;
+  background-color: white;
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.dropdownItems li {
+  padding: 0.5rem 0;
 }
 
 .linkTitle {
@@ -85,7 +124,7 @@
     align-items: center;
   }
 
-  .links {
+  .linkContainer {
     display: none;
   }
 }
