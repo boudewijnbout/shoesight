@@ -1,9 +1,8 @@
 import classes from "./HamburgerMenu.module.css";
 import Link from "next/link";
-import Image from "next/image";
-import { useState } from "react";
 import HamburgerMenuDropdown from "/components/header/HamburgerMenuDropdown";
 import HamburgerMenuDropdownItem from "/components/header/HamburgerMenuDropdownItem";
+import SocialMediaIcons from "/components/header/SocialMediaIcons";
 function HamburgerMenuNav() {
   return (
     <>
@@ -40,40 +39,7 @@ function HamburgerMenuNav() {
           <HamburgerMenuDropdownItem link="/" linkName="contact" />
         </HamburgerMenuDropdown>
 
-        <li className={classes.socialMediaIcons}>
-          <Link href="/">
-            <Image
-              src="/instagramLogo.svg"
-              alt="instagram-logo"
-              width={25}
-              height={25}
-            />
-          </Link>
-          <Link href="/">
-            <Image
-              src="/facebookLogo.svg"
-              alt="facebook-logo"
-              width={25}
-              height={25}
-            />
-          </Link>
-          <Link href="/">
-            <Image
-              src="/twitterLogo.svg"
-              alt="twitter-logo"
-              width={25}
-              height={25}
-            />
-          </Link>
-          <Link href="/">
-            <Image
-              src="/linkedinLogo.svg"
-              alt="linkedin-logo"
-              width={25}
-              height={25}
-            />
-          </Link>
-        </li>
+        <SocialMediaIcons />
       </ul>
     </>
   );
