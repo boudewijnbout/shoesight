@@ -18,7 +18,8 @@ html, body {
 # Sections
 --------------------------------------------------------------*/
 section {
-    padding: 1.6rem 6.5rem;
+    /* padding: 1.6rem 6.5rem; */
+    padding: 0 1rem;
     border: 1px solid var(--border-color);
 }
 
