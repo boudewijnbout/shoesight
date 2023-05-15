@@ -1,6 +1,5 @@
 import classes from "../../src/styles/Header.module.css";
 import Link from "next/link";
-import Image from "next/image";
 import Searchbar from "/components/header/Searchbar";
 import Dropdown from "/components/header/Dropdown";
 import DropdownItem from "./DropdownItem";

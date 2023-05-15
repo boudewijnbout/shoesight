@@ -16,6 +16,7 @@
     "@prismicio/react": "^2.6.1",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
+    "framer-motion": "^10.12.10",
     "hamburger-react": "^2.5.0",
     "next": "13.3.0",
     "react": "18.2.0",
