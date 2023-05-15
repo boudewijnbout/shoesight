@@ -1,6 +1,6 @@
 import classes from "../../src/styles/Header.module.css";
 
-function Searchbar() {
+const Searchbar = () => {
   return (
     <>
       <input
@@ -10,6 +10,6 @@ function Searchbar() {
       ></input>
     </>
   );
-}
+};
 
 export default Searchbar;

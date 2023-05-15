@@ -2,9 +2,8 @@ import classes from "./HamburgerMenu.module.css";
 
 import { useState } from "react";
 
-function HamburgerMenuDropdown(props) {
+const HamburgerDropdown = (props) => {
   const [open, setOpen] = useState(false);
-  console.log(props);
   return (
     <>
       <button
@@ -13,11 +12,11 @@ function HamburgerMenuDropdown(props) {
           setOpen(!open);
         }}
       >
-        {props.name}
+        {props.title}
       </button>
       {open && <ul className={classes.dropdown}>{props.children}</ul>}
     </>
   );
-}
+};
 
-export default HamburgerMenuDropdown;
+export default HamburgerDropdown;

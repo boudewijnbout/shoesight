@@ -1,7 +1,7 @@
 import classes from "../../src/styles/Header.module.css";
 import Link from "next/link";
 
-function DropdownItem(props) {
+const DropdownItem = (props) => {
   return (
     <>
       <li>
@@ -11,6 +11,6 @@ function DropdownItem(props) {
       </li>
     </>
   );
-}
+};
 
 export default DropdownItem;

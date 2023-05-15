@@ -1,8 +1,8 @@
 import classes from "./HamburgerMenu.module.css";
-import HamburgerMenuNav from "./HamburgerMenuNav";
+import HamburgerNav from "./HamburgerNav";
 import { Squash as Hamburger } from "hamburger-react";
 import { useState } from "react";
-function HamburgerMenu() {
+const HamburgerMenu = () => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -18,10 +18,10 @@ function HamburgerMenu() {
           <Hamburger size={35} color="#000000" rounded />
         </button>
 
-        {open && <HamburgerMenuNav />}
+        {open && <HamburgerNav />}
       </nav>
     </>
   );
-}
+};
 
 export default HamburgerMenu;

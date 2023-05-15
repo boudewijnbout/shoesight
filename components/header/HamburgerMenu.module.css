@@ -21,7 +21,7 @@
   border-radius: 1rem;
 }
 
-.HamburgerMenuNav {
+.hamburgerNav {
   width: 100%;
   display: flex;
   flex-direction: column;

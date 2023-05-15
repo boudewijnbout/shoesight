@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import classes from "./HamburgerMenu.module.css";
+import classes from "./header/HamburgerMenu.module.css";
 
-function SocialMediaIcons() {
+const SocialMediaIcons = () => {
   return (
     <>
       <li className={classes.socialMediaIcons}>
@@ -41,6 +41,6 @@ function SocialMediaIcons() {
       </li>
     </>
   );
-}
+};
 
 export default SocialMediaIcons;

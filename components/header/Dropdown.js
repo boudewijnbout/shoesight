@@ -1,11 +1,11 @@
 import classes from "../../src/styles/Header.module.css";
 
-function Dropdown(props) {
+const Dropdown = (props) => {
   return (
     <>
       <ul className={classes.dropdownItems}>{props.children}</ul>
     </>
   );
-}
+};
 
 export default Dropdown;

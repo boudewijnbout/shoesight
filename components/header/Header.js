@@ -4,8 +4,8 @@ import Searchbar from "/components/header/Searchbar";
 import Dropdown from "/components/header/Dropdown";
 import DropdownItem from "./DropdownItem";
 import HamburgerMenu from "/components/header/HamburgerMenu";
-import SocialMediaIcons from "/components/header/SocialMediaIcons";
-function Header() {
+import SocialMediaIcons from "/components/SocialMediaIcons";
+const Header = () => {
   return (
     <>
       <header className={classes.header}>
@@ -72,6 +72,6 @@ function Header() {
       </header>
     </>
   );
-}
+};
 
 export default Header;
