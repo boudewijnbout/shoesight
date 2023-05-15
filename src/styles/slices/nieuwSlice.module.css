@@ -21,11 +21,14 @@
 	flex-direction: row;
     justify-content: start;
 	gap: 2em;
-    overscroll-behavior-x: contain;
+    overscroll-behavior-x:contain;
     scroll-snap-type: x mandatory;
     overflow: scroll;
 }
 
+.nieuw div::-webkit-scrollbar {
+    display: none;
+  }
 .nieuw picture {
 	width: 70vw;
 	height: 50vw;
@@ -37,6 +40,7 @@
 	object-fit: cover;
 	border-radius: 0.5em;
     scroll-snap-align: start;
+    
 }
 
 .nieuw h2 {
@@ -50,7 +54,7 @@
 
 @media (min-width: 30em) {
 	.nieuw picture {
-		width: 40vw;
+		width: 45vw;
 		height: 25vw;
 	}
 }
