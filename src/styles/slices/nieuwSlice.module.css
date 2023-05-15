@@ -1,0 +1,70 @@
+.nieuw {
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    padding: 2em 1.5em;
+}
+
+.nieuw article {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	padding-top: 2em;
+
+}
+ .nieuw article :nth-child(2){
+    font-weight: bold;
+ }
+
+.nieuw div {
+	display: flex;
+	flex-direction: row;
+    justify-content: start;
+	gap: 2em;
+    overscroll-behavior-x:contain;
+    scroll-snap-type: x mandatory;
+    overflow: scroll;
+}
+
+.nieuw div::-webkit-scrollbar {
+    display: none;
+  }
+.nieuw picture {
+	width: 70vw;
+	height: 50vw;
+}
+
+.nieuw img {
+	width: inherit;
+	height: inherit;
+	object-fit: cover;
+	border-radius: 0.5em;
+    scroll-snap-align: start;
+    
+}
+
+.nieuw h2 {
+	font-size: 1.5rem;
+}
+
+.nieuw p {
+	font-size: 1em;
+	font-family: "Cormorant";
+}
+
+@media (min-width: 30em) {
+	.nieuw picture {
+		width: 45vw;
+		height: 25vw;
+	}
+}
+
+@media (min-width: 60rem) {
+	.nieuw {
+		padding: 2em 5em;
+	}
+	.nieuw picture {
+		width: 21vw;
+		height: 11vw;
+	}
+}

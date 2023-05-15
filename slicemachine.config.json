@@ -1,5 +1,5 @@
 {
   "repositoryName": "shoesight",
   "adapter": "@slicemachine/adapter-next",
-  "libraries": ["./slices"]
+  "libraries": ["src/slices"]
 }

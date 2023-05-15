@@ -23,10 +23,10 @@
         }
       },
       "items": {
-        "article_link": {
+        "articlelink": {
           "type": "Link",
           "config": {
-            "label": "article_link",
+            "label": "articleLink",
             "select": "document",
             "customtypes": ["article"]
           }
