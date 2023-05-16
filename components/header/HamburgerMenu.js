@@ -4,7 +4,11 @@ import { Squash as Hamburger } from "hamburger-react";
 import { useState } from "react";
 const HamburgerMenu = () => {
   const [open, setOpen] = useState(false);
+  const [animation, setAnimation] = useState(false);
 
+  const animate = () => {
+    setAnimation(true);
+  };
   return (
     <>
       <nav className={classes.mobileNav}>
@@ -13,12 +17,17 @@ const HamburgerMenu = () => {
           className={classes.container}
           onClick={() => {
             setOpen(!open);
+            animate();
           }}
         >
           <Hamburger size={35} color="#000000" rounded />
         </button>
 
-        {open && <HamburgerNav />}
+        {open && (
+          <HamburgerNav
+            class={animation ? classes.animation : classes.hamburgerNav}
+          />
+        )}
       </nav>
     </>
   );

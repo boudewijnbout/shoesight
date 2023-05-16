@@ -1,6 +1,6 @@
 import classes from "../../src/styles/Header.module.css";
 
-const Searchbar = () => {
+const Searchbar = (props) => {
   return (
     <>
       <input
