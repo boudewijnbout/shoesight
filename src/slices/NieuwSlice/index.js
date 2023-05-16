@@ -25,7 +25,7 @@ const NieuwSlice = ({ slice }) => {
 							{/* Nieuw article */}
 							<article>
 								<picture>
-									<PrismicNextImage field={article.featuredimage} />
+									<PrismicNextImage priority field={article.featuredimage} />
 									<Label title={article.label[0].text} />
 								</picture>
 								<PrismicRichText field={article.title} />
