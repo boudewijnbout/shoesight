@@ -1,37 +1,41 @@
 .nieuw {
 	display: flex;
 	flex-direction: column;
-    justify-content: center;
-    padding: 2em 1.5em;
 }
 
-.nieuw article {
-	display: flex;
-	flex-direction: column;
-	gap: 1em;
-	padding-top: 2em;
-
+/* Section title */
+.nieuw h3 {
+	font-size: 1.15rem;
 }
- .nieuw article :nth-child(2){
-    font-weight: bold;
- }
 
+/* Horizontal scroll wrapper */
 .nieuw div {
+	margin-top: 1rem;
 	display: flex;
 	flex-direction: row;
-    justify-content: start;
-	gap: 2em;
+	gap: 1.5rem;
     overscroll-behavior-x:contain;
     scroll-snap-type: x mandatory;
     overflow: scroll;
 }
 
+/* Disable horizontal scrollbar */
 .nieuw div::-webkit-scrollbar {
     display: none;
-  }
+}
+
+/* Article */
+.nieuw article {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Article featured image */
 .nieuw picture {
-	width: 70vw;
-	height: 50vw;
+	width: 15rem;
+	height: 10rem;
+	position: relative;
+	margin-bottom: 0.75rem;
 }
 
 .nieuw img {
@@ -40,31 +44,28 @@
 	object-fit: cover;
 	border-radius: 0.5em;
     scroll-snap-align: start;
-    
+	border: 1px solid var(--border-color);
 }
 
-.nieuw h2 {
-	font-size: 1.5rem;
+/* Article title */
+.nieuw h4 {
+	margin-bottom: 0.75rem;
 }
 
+/* Article description */
 .nieuw p {
-	font-size: 1em;
+	font-size: 0.95rem;
 	font-family: "Cormorant";
 }
 
-@media (min-width: 30em) {
-	.nieuw picture {
-		width: 45vw;
-		height: 25vw;
-	}
-}
-
-@media (min-width: 60rem) {
+/* Media querys */
+@media (min-width: 75rem) {
 	.nieuw {
-		padding: 2em 5em;
+		padding: 1rem 6.5rem;
 	}
+	
 	.nieuw picture {
-		width: 21vw;
-		height: 11vw;
+		width: 100%;
+		height: 12rem;
 	}
 }
