@@ -16,19 +16,30 @@ const HighlightsSlice = ({ slice }) => {
     <section className={styles.section}>
       <PrismicRichText field={slice.primary.title} />
 
-      <HighlightArticleLarge imageUrl={articles[0].featuredimage} label={articles[0].label[0].text}  />
+      <div className={styles.highlightsArticleWrapper}>
+        <HighlightArticleLarge imageUrl={articles[0].featuredimage} label={articles[0].label[0].text} />
 
-      {icons.map((icon) => {          
-        return (
-          <>
-            <article>
-              <picture>
-                <PrismicNextImage field={icon.featuredImage} />
-              </picture>
-            </article>
-          </>
-        )
-      })}
+        <div className={styles.iconsWrapper}>
+          {icons.map((icon) => {
+
+            return (
+              <>
+                <article className={styles.iconCard}>
+                  <picture>
+                    <PrismicNextImage field={icon.featuredimage} />
+                  </picture>
+
+                  <div>
+                    <span>{icon.label[0].text}</span>
+                    <PrismicRichText field={icon.title} />
+                    <PrismicRichText field={icon.shortdescription} />
+                  </div>
+                </article>
+              </>
+            )
+          })}
+        </div>
+      </div>
     </section>
   );
 };
