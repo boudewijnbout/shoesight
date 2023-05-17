@@ -12,6 +12,7 @@ const Header = () => {
         <div className={classes.logo}>
           <h1>SHOESIGHT</h1>
           <h2>Always keep your eyes on the prize</h2>
+
           <HamburgerMenu />
         </div>
 

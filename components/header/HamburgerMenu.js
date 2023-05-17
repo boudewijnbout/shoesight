@@ -20,7 +20,7 @@ const HamburgerMenu = () => {
             animate();
           }}
         >
-          <Hamburger size={35} color="#000000" rounded />
+          <Hamburger size={32} color="#000000" rounded />
         </button>
 
         {open && (
