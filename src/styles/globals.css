@@ -18,16 +18,28 @@ html, body {
 # Sections
 --------------------------------------------------------------*/
 section {
-    padding: 1.6rem 6.5rem;
-    border: 1px solid var(--border-color);
+    /* padding: 1.6rem 6.5rem; */
+    padding: 1rem;
 }
 
 /*--------------------------------------------------------------
 # Headings
 --------------------------------------------------------------*/
-h2 {
+h3 {
     color: var(--black);
     font-family: "Poppins", sans-serif;
     font-weight: 600;
+}
+
+h4 {
+    font-family: "Cormorant", sans-serif;
     font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/*--------------------------------------------------------------
+# Span
+--------------------------------------------------------------*/
+span {
+    font-family: "Poppins", sans-serif;
 }

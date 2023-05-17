@@ -1,0 +1,71 @@
+.nieuw {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Section title */
+.nieuw h3 {
+	font-size: 1.15rem;
+}
+
+/* Horizontal scroll wrapper */
+.nieuw div {
+	margin-top: 1rem;
+	display: flex;
+	flex-direction: row;
+	gap: 1.5rem;
+    overscroll-behavior-x:contain;
+    scroll-snap-type: x mandatory;
+    overflow: scroll;
+}
+
+/* Disable horizontal scrollbar */
+.nieuw div::-webkit-scrollbar {
+    display: none;
+}
+
+/* Article */
+.nieuw article {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Article featured image */
+.nieuw picture {
+	width: 15rem;
+	height: 10rem;
+	position: relative;
+	margin-bottom: 0.75rem;
+}
+
+.nieuw img {
+	width: inherit;
+	height: inherit;
+	object-fit: cover;
+	border-radius: 0.5em;
+    scroll-snap-align: start;
+	border: 1px solid var(--border-color);
+}
+
+/* Article title */
+.nieuw h4 {
+	margin-bottom: 0.75rem;
+}
+
+/* Article description */
+.nieuw p {
+	font-size: 0.95rem;
+	font-family: "Cormorant";
+}
+
+/* Media querys */
+@media (min-width: 75rem) {
+	.nieuw {
+		padding: 1rem 6.5rem;
+	}
+	
+	.nieuw picture {
+		width: 100%;
+		height: 12rem;
+	}
+}
