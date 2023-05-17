@@ -4,11 +4,9 @@ import Link from "next/link";
 const DropdownItem = (props) => {
   return (
     <>
-      <li>
-        <Link className={classes.linkTitle} href={props.link}>
-          {props.name}
-        </Link>
-      </li>
+      <Link className={classes.linkTitle} href={props.link}>
+        {props.name}
+      </Link>
     </>
   );
 };

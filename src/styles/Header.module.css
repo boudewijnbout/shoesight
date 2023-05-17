@@ -16,23 +16,29 @@
 
 .logo h1 {
   font-family: "Cormorant", serif;
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
 .logo h2 {
-  color: red;
+  color: #d9232d;
   font-family: "Satisfy", cursive;
   font-weight: 200;
   font-size: 1rem;
 }
 
-.nav {
+.socialMediaIcons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.container {
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
   height: 3rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  width: 100vw;
 }
 
 .navItems {
@@ -68,14 +74,13 @@
   padding: 1rem 0;
 }
 
-.link:hover > .dropdownItems {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
+.DropdownTitle {
+  background: none;
+  width: 100%;
+  height: 100%;
+  border: none;
   position: absolute;
-  top: 52px;
+  cursor: pointer;
 }
 
 .dropdownItems {
@@ -87,6 +92,13 @@
   border-left: 1px solid #e5e5e5;
   border-right: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: absolute;
+  top: 52px;
 }
 
 .dropdownItems li {
@@ -135,7 +147,32 @@
     align-items: center;
   }
 
-  .linkContainer {
+  .container nav {
     display: none;
+  }
+
+  .searchbar {
+    width: 20rem;
+  }
+
+  .socialMediaIcons {
+    display: none;
+  }
+}
+
+@media ((min-width: 40rem) and (max-width: 52rem)) {
+  .logo h1 {
+    font-size: 2.5rem;
+  }
+  .logo h2 {
+    font-size: 1rem;
+  }
+
+  .container nav {
+    display: none;
+  }
+
+  .searchbar {
+    width: 18rem;
   }
 }

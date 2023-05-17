@@ -23,13 +23,14 @@
 
 .hamburgerNav {
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding-right: 1rem;
   top: 80px;
-  /* right: 0; */
+  right: 0;
   position: absolute;
   background-color: white;
   border-top: 1px solid #e5e5e5;
@@ -77,6 +78,12 @@
   margin-top: 0.5rem;
 }
 
+.SocialMediaIconsDropdown {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
 .mobileNav {
   display: none;
 }
@@ -102,14 +109,44 @@
     align-items: center;
     flex-direction: column;
   }
+
+  .SocialMediaIconsDropdown {
+    display: flex;
+  }
+
+  .linkTitle {
+    margin-bottom: 1.5rem;
+  }
 }
 
+@media ((min-width: 40rem) and (max-width: 52rem)) {
+  .container {
+    display: flex;
+    align-self: end;
+  }
+
+  .mobileNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .SocialMediaIconsDropdown {
+    display: none;
+  }
+
+  .linkTitle {
+    margin-bottom: 1.5rem;
+  }
+}
 .animation {
   animation: animation 1s;
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding-right: 1rem;
   top: 80px;

@@ -43,7 +43,7 @@ const HamburgerNav = (props) => {
             <HamburgerDropdownItem link="/" linkTitle="contact" />
           </HamburgerDropdown>
         </li>
-        <li className={classes.linkTitle}>
+        <li className={classes.SocialMediaIconsDropdown}>
           <SocialMediaIcons />
         </li>
       </ul>
