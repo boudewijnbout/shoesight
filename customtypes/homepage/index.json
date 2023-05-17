@@ -5,6 +5,7 @@
   "status": true,
   "json": {
     "Main": {
+      "uid": { "type": "UID", "config": { "label": "uid", "placeholder": "" } },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

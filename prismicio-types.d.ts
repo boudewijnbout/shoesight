@@ -122,7 +122,7 @@ type HomepageDocumentDataSlicesSlice =
  * @typeParam Lang - Language API ID of the document.
  */
 export type HomepageDocument<Lang extends string = string> =
-  prismicT.PrismicDocumentWithoutUID<
+  prismicT.PrismicDocumentWithUID<
     Simplify<HomepageDocumentData>,
     "homepage",
     Lang
