@@ -7,9 +7,7 @@
 }
 
 .highlightsArticleWrapper {
-    /* display: grid; */
-    /* grid-template-columns: 1.35fr 0.75fr; */
-    /* grid-gap: 6.2rem; */
+    display: grid;
 }
 
 .iconCard {
@@ -51,4 +49,12 @@
     font-family: "Cormorant", sans-serif;
     font-size: 0.95rem;
     line-height: 1.3rem;
+}
+
+@media (min-width: 40rem) {
+    .highlightsArticleWrapper {
+        display: grid;
+        grid-template-columns: 1fr 0.5fr;
+        grid-gap: 2rem;
+    }
 }

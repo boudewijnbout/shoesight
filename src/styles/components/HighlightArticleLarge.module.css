@@ -46,3 +46,13 @@
     font-weight: 500;
     transform-origin: 0 0;
 }
+
+@media (min-width: 40rem) {
+    .highlightArticle {
+        margin-bottom: 0;
+    }
+
+    .highlightArticle picture {
+        height: 100%;
+    }
+}
