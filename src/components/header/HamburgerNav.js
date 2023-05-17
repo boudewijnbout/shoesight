@@ -2,7 +2,7 @@ import classes from "./HamburgerMenu.module.css";
 import Link from "next/link";
 import HamburgerDropdown from "../../components/header/HamburgerDropdown";
 import HamburgerDropdownItem from "../../components/header/HamburgerDropdownItem";
-import SocialMediaIcons from "../../components/header/SocialMediaIcons";
+import SocialMediaIcons from "./SocialMediaIcons";
 
 const HamburgerNav = (props) => {
   return (

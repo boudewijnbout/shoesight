@@ -1,10 +1,10 @@
-import classes from "../..//styles/components/Header.module.css";
+import classes from "./Header.module.css";
 import Link from "next/link";
 import Searchbar from "../../components/header/Searchbar";
 import Dropdown from "../../components/header/Dropdown";
 import DropdownItem from "./DropdownItem";
 import HamburgerMenu from "../../components/header/HamburgerMenu";
-import SocialMediaIcons from "../../components/header/SocialMediaIcons";
+import SocialMediaIcons from "./SocialMediaIcons";
 
 const Header = () => {
   return (

@@ -90,7 +90,7 @@
   padding: 0rem 1rem;
   width: 10rem;
   background-color: white;
-  border-left: 1px solid #e5e5e5;
+  border-left: 10px solid #e5e5e5;
   border-right: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
   display: inline-flex;
@@ -100,6 +100,7 @@
   text-align: center;
   position: absolute;
   top: 52px;
+  /* z-index: 20; */
 }
 
 .dropdownItems li {
