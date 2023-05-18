@@ -3,39 +3,43 @@
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  height: 10rem;
+  padding: 1rem;
+  z-index: 999;
 }
 
-.logo {
+.headerLogo {
   text-align: center;
   width: 100vw;
 }
 
-.logo h1 {
-  font-family: "Cormorant", serif;
-  font-size: 3.5rem;
+.headerLogo h1 {
+  font-size: 3rem;
 }
 
-.logo h2 {
-  color: #d9232d;
-  font-family: "Satisfy", cursive;
-  font-weight: 200;
+.headerLogo h2 {
+  color:  var(--red-accent);
   font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
 }
 
 .socialMediaIcons {
   display: flex;
-  gap: 0.5rem;
   margin-top: 0.5rem;
 }
-.container {
+
+.socialMediaIcons a {
+  margin-right: 0.35rem;
+}
+
+.headerItemsWrapper {
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
-  height: 3rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100vw;
+  padding: 0 1rem;
 }
 
 .navItems {
@@ -113,9 +117,10 @@
 .searchbar {
   border: 1px solid #e5e5e5;
   height: 1.5rem;
-  width: 12rem;
+  /* width: 12rem; */
   padding-left: 0.5rem;
   border-radius: 3px;
+  background-color: var(--white);
 }
 
 @keyframes opacity {
@@ -144,16 +149,16 @@
     align-items: center;
   }
 
-  .container nav {
+  .headerMenuDesktop {
     display: none;
   }
 
   .searchbar {
-    width: 20rem;
+    /* width: 20rem; */
   }
 
   .socialMediaIcons {
-    display: none;
+    /* display: none; */
   }
 }
 
@@ -165,11 +170,11 @@
     font-size: 1rem;
   }
 
-  .container nav {
+  .headerItemsWrapper nav {
     display: none;
   }
 
   .searchbar {
-    width: 18rem;
+    /* width: 18rem; */
   }
 }

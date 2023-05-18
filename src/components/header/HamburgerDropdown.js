@@ -9,6 +9,7 @@ const HamburgerDropdown = (props) => {
   const animate = () => {
     setAnimation(true);
   };
+  
   return (
     <>
       <button

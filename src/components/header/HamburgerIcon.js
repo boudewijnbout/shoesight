@@ -1,34 +1,34 @@
-import classes from "./HamburgerMenu.module.css";
-
+import styles from "../../styles/components/header/HamburgerIcon.module.css";
+import MobileNav from "./MobileNav";
+import { Squash as Hamburger } from "hamburger-react";
 import { useState } from "react";
 
-const HamburgerDropdown = (props) => {
+const HamburgerMenu = () => {
   const [open, setOpen] = useState(false);
   const [animation, setAnimation] = useState(false);
 
   const animate = () => {
     setAnimation(true);
   };
+
   return (
     <>
       <button
+        className={styles.hamburgerIcon}
         type="button"
         onClick={() => {
           setOpen(!open);
           animate();
         }}
       >
-        {props.title}
+        <Hamburger size={32} color="#000000" rounded />
       </button>
+
       {open && (
-        <ul
-          className={animation ? classes.dropdownAnimation : classes.dropdown}
-        >
-          {props.children}
-        </ul>
+        <MobileNav open={open} />
       )}
     </>
   );
 };
 
-export default HamburgerDropdown;
+export default HamburgerMenu;

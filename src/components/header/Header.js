@@ -1,35 +1,33 @@
-import classes from "../..//styles/components/Header.module.css";
+import styles from "../../styles/components/header/Header.module.css";
 import Link from "next/link";
 import Searchbar from "../../components/header/Searchbar";
 import Dropdown from "../../components/header/Dropdown";
 import DropdownItem from "./DropdownItem";
-import HamburgerMenu from "../../components/header/HamburgerMenu";
+import HamburgerIcon from "./HamburgerIcon";
 import SocialMediaIcons from "../../components/header/SocialMediaIcons";
 
 const Header = () => {
   return (
     <>
-      <header className={classes.header}>
-        <div className={classes.logo}>
+      <header className={styles.header}>
+        <div className={styles.headerLogo}>
           <h1>SHOESIGHT</h1>
           <h2>Always keep your eyes on the prize</h2>
-
-          <HamburgerMenu />
         </div>
 
-        <div className={classes.container}>
-          <div className={classes.socialMediaIcons}>
+        <div className={styles.headerItemsWrapper}>
+          <div className={styles.socialMediaIcons}>
             <SocialMediaIcons />
           </div>
-          <nav>
-            <ul className={classes.linkContainer}>
-              <li className={classes.link}>
-                <Link className={classes.linkTitle} href="/">
+          <nav className={styles.headerMenuDesktop}>
+            <ul className={styles.linkContainer}>
+              <li className={styles.link}>
+                <Link className={styles.linkTitle} href="/">
                   home
                 </Link>
               </li>
 
-              <li className={classes.link}>
+              <li className={styles.link}>
                 <Dropdown>
                   <DropdownItem name="trends" link="/" />
                   <DropdownItem name="brands" link="/" />
@@ -37,7 +35,7 @@ const Header = () => {
                 </Dropdown>
                 nieuw
               </li>
-              <li className={classes.link}>
+              <li className={styles.link}>
                 <Dropdown>
                   <DropdownItem name="8x" link="/" />
                   <DropdownItem name="wist je dat?" link="/" />
@@ -46,7 +44,7 @@ const Header = () => {
                 fun stuff
               </li>
 
-              <li className={classes.link}>
+              <li className={styles.link}>
                 <Dropdown>
                   <DropdownItem name="shoe of the day" link="/" />
                   <DropdownItem name="icons" link="/" />
@@ -54,7 +52,7 @@ const Header = () => {
                 </Dropdown>
                 highlights
               </li>
-              <li className={classes.link}>
+              <li className={styles.link}>
                 <Dropdown>
                   <DropdownItem name="shoesight" link="/" />
                   <DropdownItem name="adverteren & collabs" link="/" />
@@ -67,7 +65,7 @@ const Header = () => {
             </ul>
           </nav>
 
-          <Searchbar />
+          <HamburgerIcon />
         </div>
       </header>
     </>

@@ -1,4 +1,4 @@
-import classes from "../../styles/components/Header.module.css";
+import classes from "../../styles/components/header/Header.module.css";
 
 const Searchbar = (props) => {
   return (

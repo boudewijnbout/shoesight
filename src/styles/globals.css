@@ -25,6 +25,14 @@ section {
 /*--------------------------------------------------------------
 # Headings
 --------------------------------------------------------------*/
+h1 {
+    font-family: "Cormorant", sans-serif;
+}
+
+h2 {
+    font-family: "Satisfy", sans-serif;
+}
+
 h3 {
     color: var(--black);
     font-family: "Poppins", sans-serif;
