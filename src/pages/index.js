@@ -14,7 +14,7 @@ export async function getStaticProps({ previewData }) {
 
   return {
     props: {
-      page
-    }
-  }
+      page,
+    },
+  };
 }
