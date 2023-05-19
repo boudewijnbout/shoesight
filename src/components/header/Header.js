@@ -66,6 +66,7 @@ const Header = () => {
           </nav>
 
           <HamburgerIcon />
+          <Searchbar />
         </div>
       </header>
     </>

@@ -3,7 +3,7 @@
     background-color: var(--white);
     height: 100%;
     width: 100%;
-    top: 170px;
+    top: 11rem;
     z-index: 998;
     left: 0;
     display: flex;
@@ -16,8 +16,31 @@
     list-style: none;
 }
 
+.headerMenuMobile li {
+    margin-bottom: 1rem;
+}
+
+.headerMenuMobile li a {
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+.headerMenuMobile li button {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+}
+
+/* Seperator */
+.headerMenuMobile hr {
+    margin-bottom: 1rem;
+    width: 100%;
+    border: 1px solid var(--border-color);
+}
+
+/* Searchbar */
 .headerMenuMobile form {
     width: 100%;    
+    display: block;
 }
 
 .headerMenuMobile input {

@@ -23,6 +23,10 @@
   margin-bottom: 1rem;
 }
 
+.headerMenuDesktop {
+  display: none;
+}
+
 .socialMediaIcons {
   display: flex;
   margin-top: 0.5rem;
@@ -64,7 +68,6 @@
   gap: 2rem;
   list-style: none;
   position: relative;
-  padding: 1rem 0;
 }
 
 .link {
@@ -72,7 +75,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 0;
 }
 
 .DropdownTitle {
@@ -115,10 +117,14 @@
 }
 
 .searchbar {
-  border: 1px solid #e5e5e5;
-  height: 1.5rem;
   /* width: 12rem; */
-  padding-left: 0.5rem;
+  border-radius: 3px;
+  display: none;
+}
+
+.searchbar input {
+  padding: 0.35rem;
+  border: 1px solid #e5e5e5;
   border-radius: 3px;
   background-color: var(--white);
 }
@@ -132,49 +138,30 @@
   }
 }
 
-@media (max-width: 40rem) {
-  .logo h1 {
-    font-size: 2rem;
-  }
-  .logo h2 {
-    font-size: 1rem;
-  }
-
-  .nav ul li:first-child {
-    display: none;
-  }
-
-  .navItems {
-    justify-content: center;
-    align-items: center;
+@media (min-width: 60rem) {
+  .headerItemsWrapper {
+    padding: 0.5rem 1rem;
   }
 
   .headerMenuDesktop {
-    display: none;
+    display: block;
   }
 
   .searchbar {
-    /* width: 20rem; */
-  }
-
-  .socialMediaIcons {
-    /* display: none; */
+    display: block;
   }
 }
 
-@media ((min-width: 40rem) and (max-width: 52rem)) {
-  .logo h1 {
-    font-size: 2.5rem;
-  }
-  .logo h2 {
-    font-size: 1rem;
+@media (min-width: 75rem) {
+  .headerLogo h1 {
+    font-size: 3.5rem;
   }
 
-  .headerItemsWrapper nav {
-    display: none;
+  .headerLogo h2 {
+    font-size: 1.1rem;
   }
 
-  .searchbar {
-    /* width: 18rem; */
+  .headerItemsWrapper {
+    padding: 0.5rem 6.5rem;
   }
 }
