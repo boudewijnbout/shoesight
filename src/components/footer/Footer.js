@@ -2,7 +2,7 @@ import styles from "../../styles/components/footer/Footer.module.css";
 
 import NavItem from "./NavItem";
 import NavItemLink from "./NavItemLink";
-import SocialMediaIcons from "../header/SocialMediaIcons";
+import SocialMediaIcons from "./SocialMediaIcons";
 const Footer = () => {
   return (
     <>
