@@ -1,0 +1,10 @@
+.hamburgerIcon {
+    background: none;
+    border: none;
+}
+
+@media (min-width: 60rem) {
+    .hamburgerIcon {
+        display: none;
+    }
+}
