@@ -35,16 +35,16 @@
   font-size: 1rem;
 }
 
-.navItem {
+.footerNavItem {
   width: 8rem;
 }
 
-.navItem h3 {
+.footerNavItem h3 {
   font-size: 14px;
   color: var(--white);
   opacity: 0.75;
 }
-.navLinks {
+.footerNavLinks {
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -55,7 +55,7 @@
   border-bottom: 1px solid rgb(229, 229, 229, 0.35);
 }
 
-.navLinks li {
+.footerNavLinks li {
   list-style: none;
   text-align: center;
 }
@@ -92,10 +92,10 @@
     width: 100%;
   }
 
-  .navLinks {
+  .footerNavLinks {
     flex-wrap: nowrap;
   }
-  .navLinks li {
+  .footerNavLinks li {
     text-align: left;
   }
 
@@ -112,7 +112,7 @@
     width: 100%;
   }
 
-  .navLinks {
+  .footerNavLinks {
     border: none;
     gap: 3rem;
   }

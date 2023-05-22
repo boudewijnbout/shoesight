@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "../../styles/components/footer/Footer.module.css";
 
-const NavItemLink = (props) => {
+const FooterNavItemLink = (props) => {
   return (
     <li>
       <Link href={props.link} className={styles.linkTitle}>
@@ -11,4 +11,4 @@ const NavItemLink = (props) => {
   );
 };
 
-export default NavItemLink;
+export default FooterNavItemLink;

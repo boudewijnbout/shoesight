@@ -1,7 +1,7 @@
 import styles from "../../styles/components/footer/Footer.module.css";
 
-import NavItem from "./NavItem";
-import NavItemLink from "./NavItemLink";
+import FooterNavItem from "./FooterNavItem";
+import FooterNavItemLink from "./FooterNavItemLink";
 import SocialMediaIcons from "./SocialMediaIcons";
 const Footer = () => {
   return (
@@ -14,31 +14,31 @@ const Footer = () => {
           </div>
 
           <nav>
-            <ul className={styles.navLinks}>
-              <NavItem name="nieuw">
-                <NavItemLink link="/" name="trends" />
-                <NavItemLink link="/" name="brands" />
-                <NavItemLink link="/" name="lanceringen" />
-              </NavItem>
-              <NavItem name="fun stuff">
-                <NavItemLink link="/" name="8x" />
-                <NavItemLink link="/" name="wist je dat?" />
-                <NavItemLink link="/" name="terug in de tijd" />
-              </NavItem>
-              <NavItem name="highlights">
-                <NavItemLink link="/" name="icons" />
-                <NavItemLink link="/" name="shoe of the day" />
-                <NavItemLink link="/" name="media" />
-              </NavItem>
-              <NavItem name="over ons">
-                <NavItemLink link="/" name="shoesight" />
-                <NavItemLink link="/" name="ads & collabs" />
-                <NavItemLink link="/" name="contact" />
-              </NavItem>
-              <NavItem name="legale informatie">
-                <NavItemLink link="/" name="privacy policy" />
-                <NavItemLink link="/" name="disclaimer" />
-              </NavItem>
+            <ul className={styles.footerNavLinks}>
+              <FooterNavItem name="nieuw">
+                <FooterNavItemLink link="/" name="trends" />
+                <FooterNavItemLink link="/" name="brands" />
+                <FooterNavItemLink link="/" name="lanceringen" />
+              </FooterNavItem>
+              <FooterNavItem name="fun stuff">
+                <FooterNavItemLink link="/" name="8x" />
+                <FooterNavItemLink link="/" name="wist je dat?" />
+                <FooterNavItemLink link="/" name="terug in de tijd" />
+              </FooterNavItem>
+              <FooterNavItem name="highlights">
+                <FooterNavItemLink link="/" name="icons" />
+                <FooterNavItemLink link="/" name="shoe of the day" />
+                <FooterNavItemLink link="/" name="media" />
+              </FooterNavItem>
+              <FooterNavItem name="over ons">
+                <FooterNavItemLink link="/" name="shoesight" />
+                <FooterNavItemLink link="/" name="ads & collabs" />
+                <FooterNavItemLink link="/" name="contact" />
+              </FooterNavItem>
+              <FooterNavItem name="legale informatie">
+                <FooterNavItemLink link="/" name="privacy policy" />
+                <FooterNavItemLink link="/" name="disclaimer" />
+              </FooterNavItem>
             </ul>
           </nav>
         </div>
