@@ -2,7 +2,8 @@ import styles from "../../styles/components/footer/Footer.module.css";
 
 import FooterNavItem from "./FooterNavItem";
 import FooterNavItemLink from "./FooterNavItemLink";
-import SocialMediaIcons from "../../components/SocialMediaIcons";
+// import SocialMediaIcons from "../../components/SocialMediaIcons";
+
 const Footer = () => {
   return (
     <>
@@ -46,7 +47,7 @@ const Footer = () => {
           <p className={styles.copyright}>© 2023. Alle rechten voorbehouden</p>
 
           <div className={styles.socialMediaIcons}>
-            <SocialMediaIcons />
+            {/* <SocialMediaIcons /> */}
           </div>
         </div>
       </footer>

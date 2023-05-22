@@ -9,17 +9,6 @@ type Simplify<T> = {
 /** Content for Article documents */
 interface ArticleDocumentData {
   /**
-   * Label field in *Article*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: article.label
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-   *
-   */
-  label: prismicT.RichTextField;
-  /**
    * Title field in *Article*
    *
    * - **Field Type**: Rich Text
@@ -30,6 +19,17 @@ interface ArticleDocumentData {
    *
    */
   title: prismicT.RichTextField;
+  /**
+   * Label field in *Article*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article.label
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  label: prismicT.RichTextField;
   /**
    * shortDescription field in *Article*
    *

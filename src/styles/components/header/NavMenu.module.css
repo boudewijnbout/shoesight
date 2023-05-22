@@ -1,0 +1,17 @@
+/*--------------------------------------------------------------
+# Header nav menu
+--------------------------------------------------------------*/
+.nav {
+    position: fixed;
+    background-color: var(--white);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    transform: translateY(100%) scale(1);
+    transform-origin: 30% 0;
+    opacity: 1;
+    transition: .3s;
+}
