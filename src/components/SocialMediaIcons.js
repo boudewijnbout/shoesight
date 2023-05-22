@@ -6,7 +6,7 @@ const SocialMediaIcons = () => {
     <>
         <Link href="/">
           <Image
-            src="/instagramLogo.svg"
+            src="/static/images/instagram.svg"
             alt="instagram-logo"
             width={25}
             height={25}
@@ -14,7 +14,7 @@ const SocialMediaIcons = () => {
         </Link>
         <Link href="/">
           <Image
-            src="/facebookLogo.svg"
+            src="/static/images/facebook.svg"
             alt="facebook-logo"
             width={25}
             height={25}
@@ -22,7 +22,7 @@ const SocialMediaIcons = () => {
         </Link>
         <Link href="/">
           <Image
-            src="/twitterLogo.svg"
+            src="/static/images/twitter.svg"
             alt="twitter-logo"
             width={25}
             height={25}
@@ -30,7 +30,7 @@ const SocialMediaIcons = () => {
         </Link>
         <Link href="/">
           <Image
-            src="/linkedinLogo.svg"
+            src="/static/images/linkedin.svg"
             alt="linkedin-logo"
             width={25}
             height={25}

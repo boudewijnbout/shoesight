@@ -4,7 +4,7 @@ import Searchbar from "../../components/header/Searchbar";
 import Dropdown from "../../components/header/Dropdown";
 import DropdownItem from "./DropdownItem";
 import HamburgerIcon from "./HamburgerIcon";
-import SocialMediaIcons from "../../components/header/SocialMediaIcons";
+import SocialMediaIcons from "../../components/SocialMediaIcons";
 
 const Header = () => {
   return (
