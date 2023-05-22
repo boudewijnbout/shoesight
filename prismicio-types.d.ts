@@ -274,15 +274,15 @@ interface NieuwSliceSliceDefaultPrimary {
  */
 export interface NieuwSliceSliceDefaultItem {
   /**
-   * article_link field in *NieuwSlice → Items*
+   * articleLink field in *NieuwSlice → Items*
    *
    * - **Field Type**: Content Relationship
    * - **Placeholder**: *None*
-   * - **API ID Path**: nieuw_slice.items[].article_link
+   * - **API ID Path**: nieuw_slice.items[].articlelink
    * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
    *
    */
-  article_link: prismicT.RelationField<"article">;
+  articlelink: prismicT.RelationField<"article">;
 }
 /**
  * Default variation for NieuwSlice Slice

@@ -20,7 +20,7 @@
 				"__TYPE__": "GroupItemContent",
 				"value": [
 					[
-						"article_link",
+						"articlelink",
 						{
 							"__TYPE__": "LinkContent",
 							"value": {

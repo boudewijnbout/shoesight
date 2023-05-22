@@ -19,8 +19,7 @@ body {
 # Sections
 --------------------------------------------------------------*/
 section {
-  /* padding: 1.6rem 6.5rem; */
-  padding: 1rem;
+    padding: 1rem;
 }
 
 /*--------------------------------------------------------------
@@ -42,5 +41,19 @@ h4 {
 # Span
 --------------------------------------------------------------*/
 span {
-  font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--red-accent);
+    color: #fff;
+    font-size: 12px;
+    padding: 0 10px;
+    border-radius: 1.8rem;
+}
+
+/*--------------------------------------------------------------
+# Media querys
+--------------------------------------------------------------*/
+@media (min-width: 75rem) {
+    section {
+        padding: 1.6rem 6.5rem;
+    }
 }
