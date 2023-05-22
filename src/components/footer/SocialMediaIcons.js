@@ -7,35 +7,20 @@ const SocialMediaIcons = () => {
     <>
       <Link href="/">
         <Image
-          src="/instagramLogo.svg"
+          src="/instagram.svg"
           alt="instagram-logo"
           width={25}
           height={25}
         />
       </Link>
       <Link href="/">
-        <Image
-          src="/facebookLogo.svg"
-          alt="facebook-logo"
-          width={25}
-          height={25}
-        />
+        <Image src="/facebook.svg" alt="facebook-logo" width={25} height={25} />
       </Link>
       <Link href="/">
-        <Image
-          src="/twitterLogo.svg"
-          alt="twitter-logo"
-          width={25}
-          height={25}
-        />
+        <Image src="/twitter.svg" alt="twitter-logo" width={25} height={25} />
       </Link>
       <Link href="/">
-        <Image
-          src="/linkedinLogo.svg"
-          alt="linkedin-logo"
-          width={25}
-          height={25}
-        />
+        <Image src="/linkedin.svg" alt="linkedin-logo" width={25} height={25} />
       </Link>
     </>
   );
