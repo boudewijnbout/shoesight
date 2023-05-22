@@ -1,4 +1,4 @@
-import classes from "./HamburgerMenu.module.css";
+import styles from "./HamburgerMenu.module.css";
 
 import { useState } from "react";
 
@@ -23,7 +23,7 @@ const HamburgerDropdown = (props) => {
       </button>
       {open && (
         <ul
-          className={animation ? classes.dropdownAnimation : classes.dropdown}
+          className={animation ? styles.dropdownAnimation : styles.dropdown}
         >
           {props.children}
         </ul>

@@ -27,23 +27,14 @@
   display: none;
 }
 
-.socialMediaIcons {
-  display: flex;
-  margin-top: 0.5rem;
-}
-
-.socialMediaIcons a {
-  margin-right: 0.35rem;
-}
-
 .headerItemsWrapper {
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100vw;
   padding: 0 1rem;
+  place-items: center;
 }
 
 .navItems {
@@ -77,54 +68,16 @@
   justify-content: center;
 }
 
-.DropdownTitle {
-  background: none;
-  width: 100%;
-  height: 100%;
-  border: none;
-  position: absolute;
-  cursor: pointer;
-}
-
-.dropdownItems {
-  display: none;
-  list-style: none;
-  padding: 0rem 1rem;
-  width: 10rem;
-  background-color: white;
-  border-left: 1px solid #e5e5e5;
-  border-right: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  position: absolute;
-  top: 52px;
-}
-
-.dropdownItems li {
-  padding: 0.5rem 0;
-  animation-name: opacity;
-  animation-duration: 0.8s;
-}
-
-.linkTitle {
-  text-decoration: none;
-  color: black;
-  font-family: "Poppins", sans-serif;
-}
-
 .searchbar {
   /* width: 12rem; */
-  border-radius: 3px;
-  display: none;
+  /* display: none; */
+  width: 85%;
 }
 
 .searchbar input {
   padding: 0.35rem;
   border: 1px solid #e5e5e5;
+  width: inherit;
   border-radius: 3px;
   background-color: var(--white);
 }
@@ -141,20 +94,29 @@
 @media (min-width: 60rem) {
   .headerItemsWrapper {
     padding: 0.5rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
   }
 
   .headerMenuDesktop {
     display: block;
+    justify-self: center;
   }
 
   .searchbar {
     display: block;
+    width: 15rem;
+    justify-self: end;
+  }
+
+  .searchbar input {
+    padding: 0.45rem;
   }
 }
 
 @media (min-width: 75rem) {
   .headerLogo h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 
   .headerLogo h2 {
@@ -162,6 +124,17 @@
   }
 
   .headerItemsWrapper {
-    padding: 0.5rem 6.5rem;
+    padding: 0.5rem 6.25rem;
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media (min-width: 81.25rem) {
+  .headerItemsWrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .searchbar {
+    width: 20rem;
   }
 }

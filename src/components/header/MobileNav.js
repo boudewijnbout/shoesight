@@ -2,8 +2,8 @@ import styles from "../../styles/components/header/MobileNav.module.css";
 import Link from "next/link";
 import HamburgerDropdown from "./HamburgerDropdown";
 import HamburgerDropdownItem from "./HamburgerDropdownItem";
-import SocialMediaIcons from "./SocialMediaIcons";
 import Searchbar from "./Searchbar";
+import SocialMediaIcons from "./SocialMediaIcons";
 
 const MobileNav = () => {
   return (
@@ -52,7 +52,9 @@ const MobileNav = () => {
     
         <hr />
 
-        <Searchbar />
+        <div className={styles.socialMediaIcons}>
+          <SocialMediaIcons />
+        </div>
       </nav>
     </>
   );

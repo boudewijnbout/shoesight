@@ -37,12 +37,10 @@
     border: 1px solid var(--border-color);
 }
 
-/* Searchbar */
-.headerMenuMobile form {
-    width: 100%;    
-    display: block;
+.socialMediaIcons {
+    
 }
 
-.headerMenuMobile input {
-    width: inherit;
+.socialMediaIcons a {
+    margin-right: 0.5rem;
 }

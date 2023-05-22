@@ -1,0 +1,15 @@
+.socialMediaIcons {
+    display: none;
+    margin-top: 0.5rem;
+}
+
+.socialMediaIcons a {
+    margin-right: 0.35rem;
+}
+
+@media (min-width: 60rem) {
+    .socialMediaIcons {
+        display: flex;
+        justify-self: start;
+    }
+}

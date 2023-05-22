@@ -1,19 +1,21 @@
-import classes from "../../styles/components/header/Header.module.css";
+import styles from "../../styles/components/header/Dropdown.module.css";
 import { useState } from "react";
-const Dropdown = (props) => {
+
+const Dropdown = ({ title, children }) => {
   const [open, setOpen] = useState(false);
+  
   return (
     <>
       <button
-        className={classes.DropdownTitle}
+        className={styles.dropdownBtn}
         type="button"
         onClick={() => {
           setOpen(!open);
         }}
       >
-        {props.title}
+        {title}
       </button>
-      {open && <ul className={classes.dropdownItems}>{props.children}</ul>}
+      {open && <ul className={styles.dropdownItems}>{children}</ul>}
     </>
   );
 };
