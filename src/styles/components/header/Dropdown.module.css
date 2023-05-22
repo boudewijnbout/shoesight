@@ -13,7 +13,7 @@
     width: 10rem;
     background-color: var(--white);
     border: 1px solid var(--border-color);
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;

@@ -1,12 +1,12 @@
-import classes from "../../styles/components/header/Header.module.css";
+import styles from "../../styles/components/header/Searchbar.module.css";
 
-const Searchbar = (props) => {
+const Searchbar = ({ title }) => {
   return (
     <>
-      <form className={classes.searchbar}>
+      <form className={styles.searchBar}>
         <input
           type="search"
-          placeholder="Artikelen zoeken.."
+          placeholder={title}
         ></input>
       </form>
     </>

@@ -1,4 +1,4 @@
-import classes from "./HamburgerMenu.module.css";
+import classes from "../../styles/components/header/HamburgerDropdown.module.css";
 import Link from "next/link";
 
 const HamburgerDropdownItem = (props) => {

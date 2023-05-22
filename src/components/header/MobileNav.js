@@ -2,7 +2,6 @@ import styles from "../../styles/components/header/MobileNav.module.css";
 import Link from "next/link";
 import HamburgerDropdown from "./HamburgerDropdown";
 import HamburgerDropdownItem from "./HamburgerDropdownItem";
-import Searchbar from "./Searchbar";
 import SocialMediaIcons from "./SocialMediaIcons";
 
 const MobileNav = () => {
@@ -10,33 +9,43 @@ const MobileNav = () => {
     <>
       <nav className={styles.headerMenuMobile} >
         <ul>
-          <li className={styles.linkTitle}>
+
+          {/* Home link */}
+          <li>
             <Link className={styles.home} href="/">
               home
             </Link>
           </li>
-          <li className={styles.linkTitle}>
+
+          {/* Nieuw dropdown */}
+          <li>
             <HamburgerDropdown title="nieuw">
               <HamburgerDropdownItem link="/" linkTitle="trends" />
               <HamburgerDropdownItem link="/" linkTitle="brands" />
               <HamburgerDropdownItem link="/" linkTitle="lanceringen" />
             </HamburgerDropdown>
           </li>
-          <li className={styles.linkTitle}>
+
+          {/* Fun stuff dropdown */}
+          <li>
             <HamburgerDropdown title="fun stuff">
               <HamburgerDropdownItem link="/" linkTitle="8x" />
               <HamburgerDropdownItem link="/" linkTitle="wist je dat?" />
               <HamburgerDropdownItem link="/" linkTitle="terug in de tijd" />
             </HamburgerDropdown>
           </li>
-          <li className={styles.linkTitle}>
+
+          {/* Highlights dropdown */}
+          <li>
             <HamburgerDropdown title="highlights">
               <HamburgerDropdownItem link="/" linkTitle="shoe of the day" />
               <HamburgerDropdownItem link="/" linkTitle="icons" />
               <HamburgerDropdownItem link="/" linkTitle="media" />
             </HamburgerDropdown>
           </li>
-          <li className={styles.linkTitle}>
+
+          {/* Over ons dropdown */}
+          <li>
             <HamburgerDropdown title="over ons">
               <HamburgerDropdownItem link="/" linkTitle="shoesight" />
               <HamburgerDropdownItem
@@ -49,9 +58,11 @@ const MobileNav = () => {
             </HamburgerDropdown>
           </li>
         </ul>
-    
+            
+        {/* Seperator line */}
         <hr />
 
+        {/* Social media icons */}
         <div className={styles.socialMediaIcons}>
           <SocialMediaIcons />
         </div>

@@ -1,4 +1,4 @@
-import styles from "./HamburgerMenu.module.css";
+import styles from "../../styles/components/header/HamburgerDropdown.module.css";
 
 import { useState } from "react";
 

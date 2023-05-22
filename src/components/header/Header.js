@@ -19,21 +19,24 @@ const Header = () => {
 
         {/* Header items */}
         <div className={styles.headerItemsWrapper}>
-          <SocialMediaIcons />
+
+          <div className={styles.socialMediaIcons}>
+            <SocialMediaIcons />
+          </div>
 
           {/* Desktop navigation menu */}
           <nav className={styles.headerMenuDesktop}>
-            <ul className={styles.linkContainer}>
+            <ul className={styles.headerMenuLinks}>
 
               {/* Home link */}
-              <li className={styles.link}>
-                <Link className={styles.linkTitle} href="/">
+              <li className={styles.headerMenulink}>
+                <Link href="/">
                   home
                 </Link>
               </li>
 
               {/* Nieuw dropdown */}
-              <li className={styles.link}>
+              <li className={styles.headerMenuLink}>
                 <Dropdown>
                   <DropdownItem title="trends" link="/" />
                   <DropdownItem title="brands" link="/" />
@@ -43,7 +46,7 @@ const Header = () => {
               </li>
 
               {/* Fun stuff dropdown */}
-              <li className={styles.link}>
+              <li className={styles.headerMenuLink}>
                 <Dropdown>
                   <DropdownItem title="8x" link="/" />
                   <DropdownItem title="wist je dat?" link="/" />
@@ -53,7 +56,7 @@ const Header = () => {
               </li>
 
               {/* Highlights dropdown */}
-              <li className={styles.link}>
+              <li className={styles.headerMenuLink}>
                 <Dropdown>
                   <DropdownItem title="shoe of the day" link="/" />
                   <DropdownItem title="icons" link="/" />
@@ -63,7 +66,7 @@ const Header = () => {
               </li>
 
               {/* Over ons dropdown */}
-              <li className={styles.link}>
+              <li className={styles.headerMenuLink}>
                 <Dropdown>
                   <DropdownItem title="shoesight" link="/" />
                   <DropdownItem ttle="adverteren & collabs" link="/" />
@@ -76,7 +79,7 @@ const Header = () => {
             </ul>
           </nav>
 
-          <Searchbar />
+          <Searchbar title="Artikelen zoeken..." />
           <HamburgerIcon />
         </div>
       </header>

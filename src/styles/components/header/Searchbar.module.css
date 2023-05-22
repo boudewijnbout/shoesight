@@ -1,0 +1,29 @@
+.searchBar {
+    width: 85%;
+}
+
+.searchBar input {
+    padding: 0.35rem;
+    border: 1px solid #e5e5e5;
+    width: inherit;
+    border-radius: 3px;
+    background-color: var(--white);
+}
+
+@media (min-width: 60rem) {
+    .searchBar {
+        display: block;
+        width: 15rem;
+        justify-self: end;
+    }
+
+    .searchbar input {
+        padding: 0.45rem;
+      }
+}
+
+@media (min-width: 81.25rem) {
+    .searchBar {
+        width: 20rem;
+    }
+}

@@ -12,17 +12,8 @@
     padding: 1rem;
 }
 
-.headerMenuMobile ul {
-    list-style: none;
-}
-
 .headerMenuMobile li {
     margin-bottom: 1rem;
-}
-
-.headerMenuMobile li a {
-    text-decoration: none;
-    font-family: "Poppins", sans-serif;
 }
 
 .headerMenuMobile li button {
@@ -37,10 +28,11 @@
     border: 1px solid var(--border-color);
 }
 
+/* Social media icons */
 .socialMediaIcons {
-    
+    display: flex;
 }
 
 .socialMediaIcons a {
-    margin-right: 0.5rem;
+    margin-right: 0.75rem;
 }

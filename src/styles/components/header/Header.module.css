@@ -17,7 +17,7 @@
 }
 
 .headerLogo h2 {
-  color:  var(--red-accent);
+  color: var(--red-accent);
   font-size: 1rem;
   font-weight: normal;
   margin-bottom: 1rem;
@@ -45,12 +45,21 @@
   width: 100vw;
 }
 
+.socialMediaIcons {
+  margin-top: 0.5rem;
+  display: none;
+}
+
+.socialMediaIcons a {
+  margin-right: 0.35rem;
+}
+
 .nav ul li:first-child {
   display: flex;
   gap: 0.5rem;
 }
 
-.linkContainer {
+.headerMenuLinks {
   display: flex;
   text-decoration: none;
   color: black;
@@ -61,31 +70,19 @@
   position: relative;
 }
 
-.link {
+.headerMenuLink {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.searchbar {
-  /* width: 12rem; */
-  /* display: none; */
-  width: 85%;
-}
-
-.searchbar input {
-  padding: 0.35rem;
-  border: 1px solid #e5e5e5;
-  width: inherit;
-  border-radius: 3px;
-  background-color: var(--white);
-}
 
 @keyframes opacity {
   from {
     opacity: 0%;
   }
+
   to {
     opacity: 100%;
   }
@@ -103,14 +100,9 @@
     justify-self: center;
   }
 
-  .searchbar {
-    display: block;
-    width: 15rem;
-    justify-self: end;
-  }
-
-  .searchbar input {
-    padding: 0.45rem;
+  .socialMediaIcons {
+    display: flex;
+    justify-self: start;
   }
 }
 
@@ -132,9 +124,5 @@
 @media (min-width: 81.25rem) {
   .headerItemsWrapper {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .searchbar {
-    width: 20rem;
   }
 }

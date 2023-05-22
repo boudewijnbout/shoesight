@@ -1,11 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../../styles/components/SocialMediaIcons.module.css"
 
 const SocialMediaIcons = () => {
   return (
     <>
-      <div className={styles.socialMediaIcons}>
         <Link href="/">
           <Image
             src="/instagramLogo.svg"
@@ -38,7 +36,6 @@ const SocialMediaIcons = () => {
             height={25}
           />
         </Link>
-      </div>
     </>
   );
 };
