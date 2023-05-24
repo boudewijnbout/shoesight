@@ -3,7 +3,7 @@ import styles from "@/styles/components/header/Header.module.css";
 // Components
 import SocialMediaIcons from "../SocialMediaIcons";
 import NavMenu from "./NavMenu";
-import SearchBar from "./SearchBar";
+import Searchbar from "./Searchbar";
 import HamburgerIcon from "./HamburgerIcon";
 
 const Header = () => {
@@ -27,7 +27,7 @@ const Header = () => {
                     <NavMenu />
 
                     {/* SearchBar */}
-                    <SearchBar label="Artikelen zoeken..." />
+                    <Searchbar label="Artikelen zoeken..." />
 
                     {/* Hamburger icon (mobile) */}
                     <HamburgerIcon />

@@ -4,7 +4,7 @@ import styles from "@/styles/components/header/NavMenuMobile.module.css";
 import NavItem from "./NavItem";
 import Dropdown from "./Dropdown";
 import DropdownItem from "./DropdownItem";
-import SearchBar from "./SearchBar";
+import SearchBar from "./Searchbar";
 
 const NavMenuMobile = ({ open }) => {
   return (
