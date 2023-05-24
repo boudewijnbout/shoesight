@@ -9,36 +9,44 @@ const NavMenu = () => {
   return (
     <>
       <nav className={styles.nav}>
-        <ul>
+        <ul className={styles.navItems}>
           <NavItem linkUrl="/" title="home" />
 
           {/* Nieuw link + dropdown */}
-          <NavItem linkUrl="/" title="nieuw">
-            <Dropdown>
+          <li className={styles.navMenuItem}>
+            <Dropdown title="nieuw">
               <DropdownItem linkUrl="/" title="trends" />
+              <DropdownItem linkUrl="/" title="brands" />
+              <DropdownItem linkUrl="/" title="lanceringen" />
             </Dropdown>
-          </NavItem>
+          </li>
 
           {/* Fun stuff link + dropdown */}
-          <NavItem linkUrl="/" title="fun stuff">
-            <Dropdown>
+          <li className={styles.navMenuItem}>
+            <Dropdown title="fun stuff">
               <DropdownItem linkUrl="/" title="8x" />
+              <DropdownItem linkUrl="/" title="wist je dat?" />
+              <DropdownItem linkUrl="/" title="terug in de tijd" />
             </Dropdown>
-          </NavItem>
+          </li>
 
           {/* Highlights link + dropdown */}
-          <NavItem linkUrl="/" title="highlights">
-            <Dropdown>
+          <li className={styles.navMenuItem}>
+            <Dropdown title="highlights">
+              <DropdownItem linkUrl="/" title="icons" />
               <DropdownItem linkUrl="/" title="shoe of the day" />
+              <DropdownItem linkUrl="/" title="media" />
             </Dropdown>
-          </NavItem>
+          </li>
 
           {/* Over ons link + dropdown */}
-          <NavItem linkUrl="/" title="over ons">
-            <Dropdown>
+          <li className={styles.navMenuItem}>
+            <Dropdown title="over ons">
               <DropdownItem linkUrl="/" title="shoesight" />
+              <DropdownItem linkUrl="/" title="ads & collabs" />
+              <DropdownItem linkUrl="/" title="contact" />
             </Dropdown>
-          </NavItem>
+          </li>
         </ul>
       </nav>
     </>

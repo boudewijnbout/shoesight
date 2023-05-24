@@ -1,10 +1,10 @@
 import styles from "@/styles/components/header/Searchbar.module.css";
 
-const SearchBar = () => {
+const SearchBar = ({ label }) => {
     return (
         <>
             <form className={styles.searchBar}>
-                <input type="search" placeholder="Artikelen zoeken..." />
+                <input type="search" placeholder={label} />
             </form>
         </>
     )

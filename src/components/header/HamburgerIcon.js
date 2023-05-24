@@ -1,5 +1,10 @@
 import { Squash as Hamburger } from "hamburger-react";
 import { useState } from "react";
+
+// Styles
+import styles from "@/styles/components/header/Header.module.css";
+
+// Components
 import NavMenuMobile from "./NavMenuMobile";
 
 const HamburgerIcon = () => {
@@ -17,8 +22,7 @@ const HamburgerIcon = () => {
 
     return (
         <>
-            <button onClick={toggleMenu}><Hamburger size={32} color="#000000" rounded /></button>
-
+            <button className={styles.hamburgerToggle} onClick={toggleMenu}><Hamburger size={32} color="#000000" rounded /></button>
             <NavMenuMobile open={open} />
         </>
     )

@@ -4,3 +4,25 @@
 .nav {
     display: none;
 }
+
+.nav ul {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Media querys
+--------------------------------------------------------------*/
+@media (min-width: 62rem) {
+    .nav {
+        display: flex;
+    }
+
+    .navItems {
+        position: relative;
+    }
+
+    .navMenuItem {
+        margin-right: 2rem;
+    }
+}

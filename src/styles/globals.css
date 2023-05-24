@@ -69,6 +69,7 @@ span {
 button {
     border: none;
     background: none;
+    cursor: pointer;
 }
 
 /*--------------------------------------------------------------
@@ -110,17 +111,6 @@ ol, ul {
     z-index: 998;
 }
 
-.hidden-dropdown {
-    visibility: hidden;
-    max-height: 0;
-    opacity: 0;
-}
-
-.visible-dropdown {
-    visibility: visible;
-    max-height: 10rem;
-    opacity: 1;
-}
 
 /*--------------------------------------------------------------
 # Media querys

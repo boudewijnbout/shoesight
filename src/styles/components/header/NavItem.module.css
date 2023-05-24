@@ -1,9 +1,15 @@
-.navItem {
+.navItem:nth-child(1) {
     border-bottom: 1px solid var(--border-color);
-    margin: 1rem 0;
     padding-bottom: 1rem;
 }
 
-.navItem:nth-child(1) {
-    margin: 0;
+/*--------------------------------------------------------------
+# Media querys
+--------------------------------------------------------------*/
+@media (min-width: 62rem) {
+    .navItem:nth-child(1) {
+        padding-bottom: 0;
+        border: none;
+        margin-right: 2rem;
+    }
 }

@@ -27,7 +27,7 @@ const Header = () => {
                     <NavMenu />
 
                     {/* SearchBar */}
-                    <SearchBar />
+                    <SearchBar label="Artikelen zoeken..." />
 
                     {/* Hamburger icon (mobile) */}
                     <HamburgerIcon />

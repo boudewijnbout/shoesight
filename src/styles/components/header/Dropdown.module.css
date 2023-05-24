@@ -30,3 +30,37 @@
 .dropdownVisible li {
     margin-bottom: 0.5rem;
 }
+
+/*--------------------------------------------------------------
+# Media querys
+--------------------------------------------------------------*/
+@media (min-width: 62rem) {
+  .dropdownHidden {
+    position: absolute;
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  .dropdownVisible {
+    top: 2rem;
+    position: absolute;
+    margin-left: 0;
+    transform: scale(1);
+    opacity: 1;
+    transition: .3s;
+    background-color: var(--white);
+    transform-origin: 30% 0;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    z-index: 999;
+    padding: 0.5rem 1rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  .dropdownVisible li:last-child {
+    margin-bottom: 0;
+  }
+}

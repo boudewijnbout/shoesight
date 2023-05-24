@@ -11,9 +11,13 @@ const Dropdown = ({ children, title }) => {
 
   return (
     <>
+    
+      {/* Toggle dropdown btn */}
       <button className={styles.dropdownBtn} onClick={toggleDropdown}>
         {title}
       </button>
+
+      {/* Dropdown menu */}
       <ul className={open ? styles.dropdownVisible : styles.dropdownHidden}>
         {children}
       </ul>

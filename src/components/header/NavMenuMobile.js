@@ -11,7 +11,7 @@ const NavMenuMobile = ({ open }) => {
     <>
       <nav className={open ? "visible" : "hidden"}>
         <ul className={styles.navMenuMobile}>
-          <NavItem linkUrl="" title="Home" />
+          <NavItem linkUrl="/" title="Home" />
 
           {/* Nieuw link + dropdown */}
           <li className={styles.navMenuMobileItem}>
@@ -50,7 +50,8 @@ const NavMenuMobile = ({ open }) => {
           </li>
         </ul>
 
-        <SearchBar />
+        {/* Searchbar */}
+        <SearchBar label="Artikelen zoeken..." />
       </nav>
     </>
   );
