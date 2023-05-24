@@ -1,0 +1,9 @@
+.navItem {
+    border-bottom: 1px solid var(--border-color);
+    margin: 1rem 0;
+    padding-bottom: 1rem;
+}
+
+.navItem:nth-child(1) {
+    margin: 0;
+}

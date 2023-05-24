@@ -1,0 +1,14 @@
+/*--------------------------------------------------------------
+# Searchbar
+--------------------------------------------------------------*/
+.searchBar { 
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.searchBar input {
+    width: inherit;
+    border: 1px solid var(--border-color);
+    padding: 0.4rem;
+    border-radius: 3px;
+}

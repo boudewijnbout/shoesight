@@ -1,0 +1,32 @@
+/*--------------------------------------------------------------
+# Dropdown menu
+--------------------------------------------------------------*/
+.dropdownBtn {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: var(--black);
+}
+
+/*--------------------------------------------------------------
+# Dropdown toggle
+--------------------------------------------------------------*/
+.dropdownHidden {
+  visibility: hidden;
+  max-height: 0;
+  opacity: 0;
+  font-size: 0.9rem;
+}
+
+.dropdownVisible {
+  visibility: visible;
+  max-height: 10rem;
+  opacity: 1;
+  transition: .5s;
+  margin-top: 0.75rem;
+  margin-left: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.dropdownVisible li {
+    margin-bottom: 0.5rem;
+}

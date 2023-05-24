@@ -1,6 +1,12 @@
+import styles from "@/styles/components/header/Searchbar.module.css";
+
 const SearchBar = () => {
     return (
-        <p>SearchBar</p>
+        <>
+            <form className={styles.searchBar}>
+                <input type="search" placeholder="Artikelen zoeken..." />
+            </form>
+        </>
     )
 }
 
