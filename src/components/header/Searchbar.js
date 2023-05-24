@@ -1,16 +1,13 @@
-import styles from "../../styles/components/header/Searchbar.module.css";
+import styles from "@/styles/components/header/Searchbar.module.css";
 
-const Searchbar = ({ title }) => {
-  return (
-    <>
-      <form className={styles.searchBar}>
-        <input
-          type="search"
-          placeholder={title}
-        ></input>
-      </form>
-    </>
-  );
-};
+const SearchBar = ({ label }) => {
+    return (
+        <>
+            <form className={styles.searchBar}>
+                <input type="search" placeholder={label} />
+            </form>
+        </>
+    )
+}
 
-export default Searchbar;
+export default SearchBar;

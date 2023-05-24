@@ -1,23 +1,28 @@
 /*--------------------------------------------------------------
-# Searchbar
+# Header nav menu
 --------------------------------------------------------------*/
-.searchBar { 
-    width: 100%;
-    padding: 0 1rem;
+.nav {
+    display: none;
 }
 
-.searchBar input {
-    width: inherit;
-    border: 1px solid var(--border-color);
-    padding: 0.4rem;
-    border-radius: 3px;
+.nav ul {
+    display: flex;
+    font-family: "Poppins", sans-serif;
 }
 
 /*--------------------------------------------------------------
 # Media querys
 --------------------------------------------------------------*/
-@media (min-width: 75rem) {
-    .searchBar { 
-        width: 18rem;
+@media (min-width: 62rem) {
+    .nav {
+        display: flex;
+    }
+
+    .navItems {
+        position: relative;
+    }
+
+    .navMenuItem {
+        margin-right: 2rem;
     }
 }

@@ -1,13 +1,11 @@
 import Link from "next/link";
 
-const DropdownItem = ({ link, title }) => {
-  return (
-    <>
-      <Link href={link}>
-        {title}
-      </Link>
-    </>
-  );
-};
+const DropdownItem = ({ linkUrl, title }) => {
+    return (
+        <li>
+            <Link href={linkUrl}>{title}</Link>
+        </li>
+    )
+}
 
 export default DropdownItem;

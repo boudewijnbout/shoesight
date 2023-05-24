@@ -1,0 +1,15 @@
+.navItem:nth-child(1) {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+/*--------------------------------------------------------------
+# Media querys
+--------------------------------------------------------------*/
+@media (min-width: 62rem) {
+    .navItem:nth-child(1) {
+        padding-bottom: 0;
+        border: none;
+        margin-right: 2rem;
+    }
+}

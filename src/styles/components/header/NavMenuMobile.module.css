@@ -1,0 +1,12 @@
+/*--------------------------------------------------------------
+# Header mobile menu
+--------------------------------------------------------------*/
+.navMenuMobile {
+    padding: 1rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.navMenuMobileItem {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}

@@ -1,0 +1,11 @@
+/*--------------------------------------------------------------
+# Social media icons
+--------------------------------------------------------------*/
+.socialMediaIcons {
+    display: flex;
+}
+
+.socialMediaIcons a {
+    margin-right: 0.5rem;
+    display: flex;
+}

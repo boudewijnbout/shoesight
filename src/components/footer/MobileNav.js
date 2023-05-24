@@ -2,7 +2,7 @@ import styles from "../../styles/components/header/MobileNav.module.css";
 import Link from "next/link";
 import HamburgerDropdown from "./HamburgerDropdown";
 import HamburgerDropdownItem from "./HamburgerDropdownItem";
-import SocialMediaIcons from "./SocialMediaIcons";
+// import SocialMediaIcons from "./SocialMediaIcons";
 
 const MobileNav = () => {
   return (
@@ -64,7 +64,7 @@ const MobileNav = () => {
 
         {/* Social media icons */}
         <div className={styles.socialMediaIcons}>
-          <SocialMediaIcons />
+          {/* <SocialMediaIcons /> */}
         </div>
       </nav>
     </>

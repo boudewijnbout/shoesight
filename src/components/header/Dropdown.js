@@ -1,21 +1,26 @@
-import styles from "../../styles/components/header/Dropdown.module.css";
+import styles from "@/styles/components/header/Dropdown.module.css";
+
 import { useState } from "react";
 
-const Dropdown = ({ title, children }) => {
+const Dropdown = ({ children, title }) => {
   const [open, setOpen] = useState(false);
-  
+
+  const toggleDropdown = () => {
+    setOpen(!open);
+  };
+
   return (
     <>
-      <button
-        className={styles.dropdownBtn}
-        type="button"
-        onClick={() => {
-          setOpen(!open);
-        }}
-      >
+    
+      {/* Toggle dropdown btn */}
+      <button className={styles.dropdownBtn} onClick={toggleDropdown}>
         {title}
       </button>
-      {open && <ul className={styles.dropdownItems}>{children}</ul>}
+
+      {/* Dropdown menu */}
+      <ul className={open ? styles.dropdownVisible : styles.dropdownHidden}>
+        {children}
+      </ul>
     </>
   );
 };

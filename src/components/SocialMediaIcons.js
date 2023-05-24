@@ -1,41 +1,42 @@
+import styles from "@/styles/components/SocialMediaIcons.module.css";
+
 import Image from "next/image";
 import Link from "next/link";
 
 const SocialMediaIcons = () => {
   return (
     <>
+      <div className={styles.socialMediaIcons}>
+        {/* Instagram logo */}
         <Link href="/">
           <Image
             src="/static/images/instagram.svg"
-            alt="instagram-logo"
+            alt="Klein instagram logo"
             width={25}
             height={25}
           />
         </Link>
+
+        {/* Facebook logo */}
         <Link href="/">
           <Image
             src="/static/images/facebook.svg"
-            alt="facebook-logo"
+            alt="Klein facebook logo"
             width={25}
             height={25}
           />
         </Link>
-        <Link href="/">
-          <Image
-            src="/static/images/twitter.svg"
-            alt="twitter-logo"
-            width={25}
-            height={25}
-          />
-        </Link>
+
+        {/* Linkedin logo */}
         <Link href="/">
           <Image
             src="/static/images/linkedin.svg"
-            alt="linkedin-logo"
+            alt="Klein linkedin logo"
             width={25}
             height={25}
           />
         </Link>
+      </div>
     </>
   );
 };

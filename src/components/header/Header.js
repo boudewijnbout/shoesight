@@ -1,90 +1,40 @@
-import styles from "../../styles/components/header/Header.module.css";
-import Link from "next/link";
-import Searchbar from "../../components/header/Searchbar";
-import Dropdown from "../../components/header/Dropdown";
-import DropdownItem from "./DropdownItem";
+import styles from "@/styles/components/header/Header.module.css";
+
+// Components
+import SocialMediaIcons from "../SocialMediaIcons";
+import NavMenu from "./NavMenu";
+import SearchBar from "./SearchBar";
 import HamburgerIcon from "./HamburgerIcon";
-import SocialMediaIcons from "../../components/SocialMediaIcons";
 
 const Header = () => {
-  return (
-    <>
-      <header className={styles.header}>
+    return (
+        <>
+            <header className={styles.header}>
+                
+                {/* Logo text */}
+                <div className={styles.headerLogo}>
+                    <h1>Shoesight</h1>
+                    <h2>Always keep your eyes at the prize</h2>
+                </div>
 
-        {/* Logo */}
-        <div className={styles.headerLogo}>
-          <h1>SHOESIGHT</h1>
-          <h2>Always keep your eyes on the prize</h2>
-        </div>
+                {/* Header items */}
+                <div className={styles.headerItems}>
 
-        {/* Header items */}
-        <div className={styles.headerItemsWrapper}>
+                    {/* Social media icons */}
+                    <SocialMediaIcons />
 
-          <div className={styles.socialMediaIcons}>
-            <SocialMediaIcons />
-          </div>
+                    {/* Navigation menu */}
+                    <NavMenu />
 
-          {/* Desktop navigation menu */}
-          <nav className={styles.headerMenuDesktop}>
-            <ul className={styles.headerMenuLinks}>
+                    {/* SearchBar */}
+                    <SearchBar label="Artikelen zoeken..." />
 
-              {/* Home link */}
-              <li className={styles.headerMenulink}>
-                <Link href="/">
-                  home
-                </Link>
-              </li>
-
-              {/* Nieuw dropdown */}
-              <li className={styles.headerMenuLink}>
-                <Dropdown>
-                  <DropdownItem title="trends" link="/" />
-                  <DropdownItem title="brands" link="/" />
-                  <DropdownItem title="lanceringen" link="/" />
-                </Dropdown>
-                nieuw
-              </li>
-
-              {/* Fun stuff dropdown */}
-              <li className={styles.headerMenuLink}>
-                <Dropdown>
-                  <DropdownItem title="8x" link="/" />
-                  <DropdownItem title="wist je dat?" link="/" />
-                  <DropdownItem title="terug in de tijd" link="/" />
-                </Dropdown>
-                fun stuff
-              </li>
-
-              {/* Highlights dropdown */}
-              <li className={styles.headerMenuLink}>
-                <Dropdown>
-                  <DropdownItem title="shoe of the day" link="/" />
-                  <DropdownItem title="icons" link="/" />
-                  <DropdownItem title="media" link="/" />
-                </Dropdown>
-                highlights
-              </li>
-
-              {/* Over ons dropdown */}
-              <li className={styles.headerMenuLink}>
-                <Dropdown>
-                  <DropdownItem title="shoesight" link="/" />
-                  <DropdownItem ttle="adverteren & collabs" link="/" />
-                  <DropdownItem title="privacy policy" link="/" />
-                  <DropdownItem title="disclaimer" link="/" />
-                  <DropdownItem title="contact" link="/" />
-                </Dropdown>
-                over ons
-              </li>
-            </ul>
-          </nav>
-
-          <Searchbar title="Artikelen zoeken..." />
-          <HamburgerIcon />
-        </div>
-      </header>
-    </>
-  );
-};
+                    {/* Hamburger icon (mobile) */}
+                    <HamburgerIcon />
+                </div>
+            </header>
+        </>
+    )
+}
 
 export default Header;

@@ -1,25 +1,66 @@
+/*--------------------------------------------------------------
+# Dropdown menu
+--------------------------------------------------------------*/
 .dropdownBtn {
-    background: none;
-    width: 100%;
-    height: 100%;
-    border: none;
-    position: absolute;
-    cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: var(--black);
 }
 
-.dropdownItems {
-    display: none;
-    padding: 0.5rem;
-    width: 10rem;
+/*--------------------------------------------------------------
+# Dropdown toggle
+--------------------------------------------------------------*/
+.dropdownHidden {
+  visibility: hidden;
+  max-height: 0;
+  opacity: 0;
+  font-size: 0.9rem;
+}
+
+.dropdownVisible {
+  visibility: visible;
+  max-height: 10rem;
+  opacity: 1;
+  transition: .5s;
+  margin-top: 0.75rem;
+  margin-left: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.dropdownVisible li {
+    margin-bottom: 0.5rem;
+}
+
+/*--------------------------------------------------------------
+# Media querys
+--------------------------------------------------------------*/
+@media (min-width: 62rem) {
+  .dropdownHidden {
+    position: absolute;
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  .dropdownVisible {
+    top: 2rem;
+    position: absolute;
+    margin-left: 0;
+    transform: scale(1);
+    opacity: 1;
+    transition: .3s;
     background-color: var(--white);
+    transform-origin: 30% 0;
     border: 1px solid var(--border-color);
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    text-align: center;
-    position: absolute;
-    top: 2.35rem;
-    z-index: 998;
+    justify-content: center;
     border-radius: 5px;
+    z-index: 999;
+    padding: 0.5rem 1rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  .dropdownVisible li:last-child {
+    margin-bottom: 0;
+  }
 }

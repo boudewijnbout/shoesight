@@ -1,34 +1,31 @@
-import styles from "../../styles/components/header/HamburgerIcon.module.css";
-import MobileNav from "./MobileNav";
 import { Squash as Hamburger } from "hamburger-react";
 import { useState } from "react";
 
-const HamburgerMenu = () => {
-  const [open, setOpen] = useState(false);
-  const [animation, setAnimation] = useState(false);
+// Styles
+import styles from "@/styles/components/header/Header.module.css";
 
-  const animate = () => {
-    setAnimation(true);
-  };
+// Components
+import NavMenuMobile from "./NavMenuMobile";
 
-  return (
-    <>
-      <button
-        className={styles.hamburgerIcon}
-        type="button"
-        onClick={() => {
-          setOpen(!open);
-          animate();
-        }}
-      >
-        <Hamburger size={32} color="#000000" rounded />
-      </button>
+const HamburgerIcon = () => {
+    const [open, setOpen] = useState(false);
 
-      {open && (
-        <MobileNav open={open} />
-      )}
-    </>
-  );
-};
+    // Disable body scroll when menu is open
+    if (typeof window !== "undefined") {
+        open?document.body.classList.add("disable-scroll"):document.body.classList.remove("disable-scroll");
+    }
 
-export default HamburgerMenu;
+    // Toggle the menu
+    const toggleMenu = () => {
+        setOpen(!open);
+    }
+
+    return (
+        <>
+            <button className={styles.hamburgerToggle} onClick={toggleMenu}><Hamburger size={32} color="#000000" rounded /></button>
+            <NavMenuMobile open={open} />
+        </>
+    )
+}
+
+export default HamburgerIcon;
