@@ -9,7 +9,7 @@ import { PrismicNextImage } from "@prismicio/next";
  * @param {NieuwSliceProps}
  */
 const HighlightsSlice = ({ slice }) => {
-  const articles = slice.items.map(obj => obj.articlelink.data)
+  const articles = slice.items.map((obj) => obj.articlelink.data);
   const icons = articles.slice(1);
 
   return (
@@ -17,15 +17,17 @@ const HighlightsSlice = ({ slice }) => {
       <PrismicRichText field={slice.primary.title} />
 
       <div className={styles.highlightsArticleWrapper}>
-        <HighlightArticleLarge imageUrl={articles[0].featuredimage} label={articles[0].label[0].text} />
+        <HighlightArticleLarge
+          imageUrl={articles[0].featuredimage}
+          label={articles[0].label[0].text}
+        />
 
         <div className={styles.iconsWrapper}>
           {icons.map((icon) => {
-
             return (
               <>
                 <article className={styles.iconCard}>
-                  <picture>
+                  <picture className={styles.iconCards}>
                     <PrismicNextImage field={icon.featuredimage} />
                   </picture>
 
@@ -36,7 +38,7 @@ const HighlightsSlice = ({ slice }) => {
                   </div>
                 </article>
               </>
-            )
+            );
           })}
         </div>
       </div>
