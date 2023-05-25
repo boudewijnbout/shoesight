@@ -23,7 +23,7 @@
 
 .article picture {
   width: 100%;
-  margin-right: 1.5rem;
+  /* margin-right: 1.5rem; */
   height: 15rem;
 }
 
@@ -49,9 +49,8 @@
 
 @media (min-width: 75rem) {
   .funstuffContainer {
-    grid-template-columns: 0.4fr 0.2fr 0.4fr;
-    grid-template-rows: 0.33fr 0.33fr 0.33fr;
-    grid-gap: 2rem;
+    grid-template-columns: 0.4fr 0.2fr auto;
+    grid-gap: 3rem;
     grid-template-areas:
       "top-left-art top-right-art top-right-art"
       "bottom-left-art bottom-center-art bottom-right-art";
@@ -62,15 +61,19 @@
   }
 
   .article:nth-child(1) picture img {
-    height: 18rem;
+    height: 20rem;
   }
 
   .article:nth-child(2) {
     grid-area: top-right-art;
   }
 
+  .article:nth-child(2) picture img {
+    height: 16rem;
+  }
+
   .article:nth-child(2) p {
-    width: 15rem;
+    width: 16rem;
   }
 
   .article:nth-child(3) {
@@ -83,11 +86,11 @@
 
   .article:nth-child(5) {
     grid-area: bottom-right-art;
-    margin-top: -8rem;
+    margin-top: -11rem;
   }
 
   .article:nth-child(5) picture img {
-    height: 23rem;
+    height: 26rem;
   }
   .article:nth-child(5) p {
     width: 24rem;
