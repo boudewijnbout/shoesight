@@ -3,7 +3,7 @@
 }
 
 .section h3 {
-  /* margin-bottom: 1.5rem; */
+  margin-bottom: 1.5rem;
 }
 .funstuffContainer {
   display: grid;
@@ -32,7 +32,7 @@
   height: inherit;
   object-fit: cover;
   border-radius: 10px;
-  /* margin-bottom: 1rem; */
+  margin-bottom: 1rem;
   border: 1px solid var(--border-color);
 }
 
