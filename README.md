@@ -14,7 +14,7 @@ Dit project omvat shoesight. Een platform waarop iedere bezoeker geinspireerd wo
 
 ## ⚡ Kenmerken
 
-Dit project is gemaakt met NextJS en Prismic.IO. Verder staat hieronder nog een korte lijst met gebruikte tools en middelen
+Dit project is gemaakt met NextJS en Prismic.io. Verder staat hieronder nog een korte lijst met gebruikte tools en middelen
 
 **Tools**
 
@@ -32,7 +32,7 @@ Dit project is gemaakt met NextJS en Prismic.IO. Verder staat hieronder nog een 
 1. Clone of download deze repository
 2. Ga naar de root directory van het project.
 3. Gebruik `npm install` om de gebruikte dev dependencies en packages te installeren.
-4. Gebruik `npm run dev` om de web-server te starten. Deze is standaard bereikbar op poort `5173`.
+4. Gebruik `npm run dev` om de web-server te starten. Deze is standaard bereikbaar op poort `3000`.
 
 ## 🔨 Gebruik
 
@@ -44,7 +44,7 @@ De applicatie is op twee manieren te gebruiken: lokaal en op het web. Lokaal is 
 
 [NextJS](https://nextjs.org/)
 <br>
-[Prismic.IO](https://prismic.io/)
+[Prismic.io](https://prismic.io/)
 <br>
 [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
