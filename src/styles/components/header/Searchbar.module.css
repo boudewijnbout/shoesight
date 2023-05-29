@@ -4,6 +4,7 @@
 .searchBar { 
     width: 100%;
     padding: 0 1rem;
+    margin-bottom: 1rem;
 }
 
 .searchBar input {
@@ -16,6 +17,12 @@
 /*--------------------------------------------------------------
 # Media querys
 --------------------------------------------------------------*/
+@media (min-width: 62rem) {
+    .searchBar {
+        margin-bottom: 0;
+    }
+}
+
 @media (min-width: 75rem) {
     .searchBar { 
         width: 18rem;

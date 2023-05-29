@@ -17,16 +17,15 @@ const NavMenu = () => {
             <Dropdown title="nieuw">
               <DropdownItem linkUrl="/" title="trends" />
               <DropdownItem linkUrl="/" title="brands" />
-              <DropdownItem linkUrl="/" title="lanceringen" />
             </Dropdown>
           </li>
 
           {/* Fun stuff link + dropdown */}
           <li className={styles.navMenuItem}>
             <Dropdown title="fun stuff">
-              <DropdownItem linkUrl="/" title="8x" />
-              <DropdownItem linkUrl="/" title="wist je dat?" />
-              <DropdownItem linkUrl="/" title="terug in de tijd" />
+              <DropdownItem linkUrl="/" title="top 10" />
+              <DropdownItem linkUrl="/" title="facts & figures" />
+              <DropdownItem linkUrl="/" title="flashback" />
             </Dropdown>
           </li>
 

@@ -2,7 +2,6 @@ import styles from "../../styles/components/header/MobileNav.module.css";
 import Link from "next/link";
 import HamburgerDropdown from "./HamburgerDropdown";
 import HamburgerDropdownItem from "./HamburgerDropdownItem";
-// import SocialMediaIcons from "./SocialMediaIcons";
 
 const MobileNav = () => {
   return (
@@ -22,16 +21,15 @@ const MobileNav = () => {
             <HamburgerDropdown title="nieuw">
               <HamburgerDropdownItem link="/" linkTitle="trends" />
               <HamburgerDropdownItem link="/" linkTitle="brands" />
-              <HamburgerDropdownItem link="/" linkTitle="lanceringen" />
             </HamburgerDropdown>
           </li>
 
           {/* Fun stuff dropdown */}
           <li>
             <HamburgerDropdown title="fun stuff">
-              <HamburgerDropdownItem link="/" linkTitle="8x" />
-              <HamburgerDropdownItem link="/" linkTitle="wist je dat?" />
-              <HamburgerDropdownItem link="/" linkTitle="terug in de tijd" />
+              <HamburgerDropdownItem link="/" linkTitle="top 10" />
+              <HamburgerDropdownItem link="/" linkTitle="facts & figures" />
+              <HamburgerDropdownItem link="/" linkTitle="flashback" />
             </HamburgerDropdown>
           </li>
 
