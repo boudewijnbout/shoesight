@@ -1,20 +1,11 @@
-.nieuw {
-	display: flex;
-	flex-direction: column;
-}
-
-/* Section title */
-.nieuw h3 {
-	font-size: 1.15rem;
-}
-
-/* Horizontal scroll wrapper */
+/*--------------------------------------------------------------
+# Nieuw slice
+--------------------------------------------------------------*/
 .nieuw div {
-	margin-top: 1rem;
-	display: flex;
-	flex-direction: row;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 	gap: 1.5rem;
-    overscroll-behavior-x:contain;
+    overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
     overflow: scroll;
 }
@@ -24,7 +15,9 @@
     display: none;
 }
 
-/* Article */
+/*--------------------------------------------------------------
+# Nieuw slice article
+--------------------------------------------------------------*/
 .nieuw article {
 	display: flex;
 	flex-direction: column;
@@ -36,15 +29,21 @@
 	height: 10rem;
 	position: relative;
 	margin-bottom: 0.75rem;
+	overflow: hidden;
+	border-radius: 10px;
+	border: 1px solid var(--border-color);
+    scroll-snap-align: start;
+}
+
+.nieuw article:hover img {
+	transform: scale(1.05);
 }
 
 .nieuw img {
 	width: inherit;
 	height: inherit;
 	object-fit: cover;
-	border-radius: 10px;
-    scroll-snap-align: start;
-	border: 1px solid var(--border-color);
+	transition: transform 200ms;
 }
 
 /* Article title */
@@ -58,7 +57,9 @@
 	font-family: "Cormorant";
 }
 
-/* Media querys */
+/*--------------------------------------------------------------
+# Media querys
+--------------------------------------------------------------*/
 @media (min-width: 75rem) {
 	.nieuw picture {
 		width: 100%;
