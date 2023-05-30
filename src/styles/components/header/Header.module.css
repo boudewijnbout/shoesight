@@ -81,6 +81,14 @@
 }
 
 @media (min-width: 75rem) {
+  .headerLogo h1 {
+    font-size: 4rem;
+  }
+
+  .headerLogo h2 {
+    font-size: 1.2rem;
+  }
+
   .headerItems {
     padding: 0.5rem 6.5rem;
   }
