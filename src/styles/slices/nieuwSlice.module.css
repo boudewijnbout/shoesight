@@ -32,6 +32,7 @@
 	overflow: hidden;
 	border-radius: 10px;
 	border: 1px solid var(--border-color);
+    scroll-snap-align: start;
 }
 
 .nieuw article:hover img {
@@ -42,7 +43,6 @@
 	width: inherit;
 	height: inherit;
 	object-fit: cover;
-    scroll-snap-align: start;
 	transition: transform 200ms;
 }
 
