@@ -1,5 +1,6 @@
 .section {
   border-top: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
 }
 
 .section h3 {
@@ -49,57 +50,34 @@
 
 @media (min-width: 75rem) {
   .funstuffContainer {
-    grid-template-columns: 0.4fr 0.2fr auto;
-    grid-gap: 3rem;
+    grid-template-columns: 0.3fr 0.4fr 0.3fr;
+    gap: 0 2rem;
     grid-template-areas:
-      "top-left-art top-right-art top-right-art"
-      "bottom-left-art bottom-center-art bottom-right-art";
+      "top-left-article center-article top-right-article"
+      "bottom-left-article center-article bottom-right-article";
   }
 
   .article:nth-child(1) {
-    grid-area: top-left-art;
-  }
-
-  .article:nth-child(1) picture img {
-    height: 20rem;
+    grid-area: top-left-article;
   }
 
   .article:nth-child(2) {
-    grid-area: top-right-art;
+    grid-area: center-article;
   }
 
   .article:nth-child(2) picture img {
-    height: 16rem;
-  }
-
-  .article:nth-child(2) p {
-    width: 16rem;
+    height: 70%;
   }
 
   .article:nth-child(3) {
-    grid-area: bottom-left-art;
+    grid-area: bottom-left-article;
   }
 
   .article:nth-child(4) {
-    grid-area: bottom-center-art;
+    grid-area: top-right-article;
   }
 
   .article:nth-child(5) {
-    grid-area: bottom-right-art;
-    margin-top: -11rem;
-  }
-
-  .article:nth-child(5) picture img {
-    height: 26rem;
-  }
-  .article:nth-child(5) p {
-    width: 24rem;
-  }
-
-  .article:nth-child(4) p {
-    width: 15rem;
-  }
-  .article:nth-child(3) p {
-    width: 24rem;
+    grid-area: bottom-right-article;
   }
 }
