@@ -1,6 +1,4 @@
 import styles from "../../styles/components/footer/Footer.module.css";
-
-import FooterNavItem from "./FooterNavItem";
 import FooterNavItemLink from "./FooterNavItemLink";
 import SocialMediaIcons from "../../components/SocialMediaIcons";
 
@@ -16,30 +14,12 @@ const Footer = () => {
 
           <nav>
             <ul className={styles.footerNavLinks}>
-              <FooterNavItem name="nieuw">
-                <FooterNavItemLink link="/" name="trends" />
-                <FooterNavItemLink link="/" name="brands" />
-                <FooterNavItemLink link="/" name="lanceringen" />
-              </FooterNavItem>
-              <FooterNavItem name="fun stuff">
-                <FooterNavItemLink link="/" name="8x" />
-                <FooterNavItemLink link="/" name="wist je dat?" />
-                <FooterNavItemLink link="/" name="terug in de tijd" />
-              </FooterNavItem>
-              <FooterNavItem name="highlights">
-                <FooterNavItemLink link="/" name="icons" />
-                <FooterNavItemLink link="/" name="shoe of the day" />
-                <FooterNavItemLink link="/" name="media" />
-              </FooterNavItem>
-              <FooterNavItem name="over ons">
-                <FooterNavItemLink link="/" name="shoesight" />
-                <FooterNavItemLink link="/" name="ads & collabs" />
-                <FooterNavItemLink link="/" name="contact" />
-              </FooterNavItem>
-              <FooterNavItem name="legale informatie">
-                <FooterNavItemLink link="/" name="privacy policy" />
-                <FooterNavItemLink link="/" name="disclaimer" />
-              </FooterNavItem>
+              <FooterNavItemLink link="/" name="about" />
+              <FooterNavItemLink link="/" name="contact" />
+              <FooterNavItemLink link="/" name="adverteren" />
+              <FooterNavItemLink link="/" name="collabs" />
+              <FooterNavItemLink link="/" name="privacy policy" />
+              <FooterNavItemLink link="/" name="disclaimer" />
             </ul>
           </nav>
         </div>
@@ -47,6 +27,7 @@ const Footer = () => {
           <p className={styles.copyright}>© 2023. Alle rechten voorbehouden</p>
 
           <div className={styles.socialMediaIcons}>
+            <p>Volg Shoesight</p>
             <SocialMediaIcons />
           </div>
         </div>
