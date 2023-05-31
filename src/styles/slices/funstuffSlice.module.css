@@ -1,5 +1,6 @@
 .section {
   border-top: 1px solid var(--border-color);
+
   margin-bottom: 1.5rem;
 }
 
@@ -43,18 +44,22 @@
     grid-gap: 1rem;
   }
 
-  .article:nth-child(3) {
+  .article:nth-child(1) {
     grid-column: 1 / -1;
   }
 }
 
 @media (min-width: 75rem) {
   .funstuffContainer {
-    grid-template-columns: 0.3fr 0.4fr 0.3fr;
+    grid-template-columns: 0.25fr 0.5fr 0.25fr;
     gap: 0 2rem;
     grid-template-areas:
       "top-left-article center-article top-right-article"
       "bottom-left-article center-article bottom-right-article";
+  }
+
+  .article picture {
+    height: 10rem;
   }
 
   .article:nth-child(1) {
@@ -66,7 +71,7 @@
   }
 
   .article:nth-child(2) picture img {
-    height: 70%;
+    height: 80%;
   }
 
   .article:nth-child(3) {
