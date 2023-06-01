@@ -15,12 +15,12 @@ export const repositoryName = config.repositoryName;
  *
  * @type {prismic.ClientConfig["routes"]}
  */
-export function linkResolver(doc) {
-  switch(doc.type) {
-    case "homepage":
-      return "/"
+const routes = [
+  {
+    type: "homepage",
+    path: "/"
   }
-}
+]
 
 /**
  * Creates a Prismic client for the project's repository. The client is used to
@@ -30,7 +30,12 @@ export function linkResolver(doc) {
  */
 export const createClient = (config = {}) => {
   const client = prismic.createClient(repositoryName, {
+    routes,
     ...config,
+
+    fetchOptions: {
+      next: { tags: ["prismic"] },
+    }
   });
 
   prismicNext.enableAutoPreviews({
