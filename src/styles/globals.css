@@ -60,8 +60,8 @@ span {
     font-family: "Poppins", sans-serif;
     background-color: var(--red-accent);
     color: #fff;
-    font-size: 12px;
-    padding: 0 10px;
+    font-size: 13px;
+    padding: 2px 14px;
     border-radius: 1.8rem;
 }
 
