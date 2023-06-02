@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import {useCallback} from "react";
 
 import styles from "@/styles/components/header/Header.module.css";
 
@@ -26,7 +27,7 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [prevScrollPos]);
+  }, [[]]);
 
   return (
     <header
