@@ -1,6 +1,10 @@
 /*--------------------------------------------------------------
 # Nieuw slice
 --------------------------------------------------------------*/
+.nieuw {
+	margin-top: 10rem;
+}
+
 .nieuw div {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -61,6 +65,10 @@
 # Media querys
 --------------------------------------------------------------*/
 @media (min-width: 75rem) {
+	.nieuw {
+		margin-top: 11.5rem;
+	}
+
 	.nieuw picture {
 		width: 100%;
 		height: 12rem;

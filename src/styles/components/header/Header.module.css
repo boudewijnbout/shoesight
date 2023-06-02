@@ -6,6 +6,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  z-index: 999;
+  background-color: var(--white);
+  width: 100%;
+  transition: transform 0.3s;
+  height: 10rem;
+}
+
+.header.active {
+  transform: translateY(-7rem);
 }
 
 /*--------------------------------------------------------------
@@ -13,6 +23,8 @@
 --------------------------------------------------------------*/
 .headerLogo {
   text-align: center;
+  transition: margin-top 0.3s;
+  height: 7rem;
 }
 
 /* Logo title */
@@ -41,6 +53,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: padding 0.3s;
+  height: 3rem;
+  background-color: var(--white);
+}
+
+.headerItems.active {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.headerItems.active nav {
+  height: calc(100vh - 3rem);
 }
 
 /*--------------------------------------------------------------
@@ -75,12 +98,28 @@
     justify-self: end;
   }
 
+  .headerItems.active nav {
+    height: 100%;
+  }
+
   .hamburgerToggle {
     display: none;
   }
 }
 
 @media (min-width: 75rem) {
+  .header {
+    height: 11.5rem;
+  }
+
+  .header.active {
+    transform: translateY(-8.5rem);
+  }
+
+  .headerLogo {
+    height: 8.5rem;
+  }
+
   .headerLogo h1 {
     font-size: 4rem;
   }
