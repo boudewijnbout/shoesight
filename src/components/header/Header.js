@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from "react";
+
 import styles from "@/styles/components/header/Header.module.css";
 
 // Components
@@ -7,10 +9,29 @@ import Searchbar from "./Searchbar";
 import HamburgerIcon from "./HamburgerIcon";
 
 const Header = () => {
+    const [isNavbarVisible, setNavbarVisible] = useState(true);
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+    const handleScroll = () => {
+        const currentScrollPos = window.scrollY;
+
+        const isVisible = prevScrollPos > currentScrollPos || currentScrollPos < 10;
+        setNavbarVisible(isVisible);
+        setPrevScrollPos(currentScrollPos);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [prevScrollPos]);
+
     return (
         <>
-            <header className={styles.header}>
-                
+            <header className={`${styles.header} ${!isNavbarVisible ? styles['active'] : ''}`}>
+
                 {/* Logo text */}
                 <div className={styles.headerLogo}>
                     <h1>Shoesight</h1>
@@ -18,7 +39,7 @@ const Header = () => {
                 </div>
 
                 {/* Header items */}
-                <div className={styles.headerItems}>
+                <div className={`${styles.headerItems} ${!isNavbarVisible ? styles['active'] : ''}`}>
 
                     {/* Social media icons */}
                     <SocialMediaIcons />
