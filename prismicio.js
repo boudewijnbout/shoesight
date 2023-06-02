@@ -15,13 +15,12 @@ export const repositoryName = config.repositoryName;
  *
  * @type {prismic.ClientConfig["routes"]}
  */
-// TODO: Update the routes array to match your project's route structure.
 const routes = [
   {
     type: "homepage",
-    path: "/",
-  },
-];
+    path: "/"
+  }
+]
 
 /**
  * Creates a Prismic client for the project's repository. The client is used to
@@ -37,6 +36,10 @@ export const createClient = (config = {}) => {
       next: { tags: ["prismic"] },
     },
     ...config,
+
+    fetchOptions: {
+      next: { tags: ["prismic"] },
+    }
   });
 
   prismicNext.enableAutoPreviews({
