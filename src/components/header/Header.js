@@ -9,53 +9,55 @@ import Searchbar from "./Searchbar";
 import HamburgerIcon from "./HamburgerIcon";
 
 const Header = () => {
-    const [isNavbarVisible, setNavbarVisible] = useState(true);
-    const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [isNavbarVisible, setNavbarVisible] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
 
-    const handleScroll = () => {
-        const currentScrollPos = window.scrollY;
+  const handleScroll = () => {
+    const currentScrollPos = window.scrollY;
 
-        const isVisible = prevScrollPos > currentScrollPos || currentScrollPos < 10;
-        setNavbarVisible(isVisible);
-        setPrevScrollPos(currentScrollPos);
+    const isVisible = prevScrollPos > currentScrollPos || currentScrollPos < 10;
+    setNavbarVisible(isVisible);
+    setPrevScrollPos(currentScrollPos);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
     };
+  }, [prevScrollPos]);
 
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
+  return (
+    <header
+      className={`${styles.header} ${!isNavbarVisible ? styles.active : ""}`}
+    >
+      {/* Logo text */}
+      <div className={styles.headerLogo}>
+        <h1>Shoesight</h1>
+        <h2>Always keep your eyes at the prize</h2>
+      </div>
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [prevScrollPos]);
+      {/* Header items */}
+      <div
+        className={`${styles.headerItems} ${
+          !isNavbarVisible ? styles["active"] : ""
+        }`}
+      >
+        {/* Social media icons */}
+        <SocialMediaIcons />
 
-    return (
-        <>
-            <header className={`${styles.header} ${!isNavbarVisible ? styles['active'] : ''}`}>
+        {/* Navigation menu */}
+        <NavMenu />
 
-                {/* Logo text */}
-                <div className={styles.headerLogo}>
-                    <h1>Shoesight</h1>
-                    <h2>Always keep your eyes at the prize</h2>
-                </div>
+        {/* SearchBar */}
+        <Searchbar label="Artikelen zoeken..." />
 
-                {/* Header items */}
-                <div className={`${styles.headerItems} ${!isNavbarVisible ? styles['active'] : ''}`}>
-
-                    {/* Social media icons */}
-                    <SocialMediaIcons />
-
-                    {/* Navigation menu */}
-                    <NavMenu />
-
-                    {/* SearchBar */}
-                    <Searchbar label="Artikelen zoeken..." />
-
-                    {/* Hamburger icon (mobile) */}
-                    <HamburgerIcon />
-                </div>
-            </header>
-        </>
-    )
-}
+        {/* Hamburger icon (mobile) */}
+        <HamburgerIcon />
+      </div>
+    </header>
+  );
+};
 
 export default Header;

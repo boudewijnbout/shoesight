@@ -9,7 +9,7 @@ import SearchBar from "./Searchbar";
 const NavMenuMobile = ({ open }) => {
   return (
     <>
-      <nav className={`${styles.nav} ${open ? styles['open'] : ''}`}>
+      <nav className={`${styles.nav} ${open ? styles.open : ''}`}>
         <ul className={styles.navItemsMobile}>
           <NavItem linkUrl="/" title="Home" />
 
