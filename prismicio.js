@@ -19,7 +19,7 @@ const routes = [
   {
     type: "homepage",
     path: "/"
-  }
+  },
 ]
 
 /**

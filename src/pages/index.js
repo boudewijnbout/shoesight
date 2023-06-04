@@ -12,7 +12,7 @@ export async function getStaticProps({ previewData }) {
   const client = createClient({ previewData });
   const page = await client.getByUID("homepage", "homepage", {
     fetchLinks: [
-      "article.label, article.featuredimage, article.title, article.shortdescription",
+      "article.label, article.featuredimage, article.title, article.shortdescription, article.uid",
     ],
   });
 
