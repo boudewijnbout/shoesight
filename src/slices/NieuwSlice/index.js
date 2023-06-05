@@ -30,7 +30,7 @@ const NieuwSlice = ({ slice }) => {
 										<PrismicNextImage priority sizes="(max-width: 30rem) 100vw, (max-width: 75rem) 33vw, 33vw" field={article.featuredimage} />
 										<Label title={article.label[0].text} />
 									</picture>
-									<PrismicRichText field={article.title} />
+									<h4>{article.title[0].text}</h4>
 									<PrismicRichText field={article.shortdescription} />
 								</article>
 							</Link>

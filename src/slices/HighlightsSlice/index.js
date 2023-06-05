@@ -31,7 +31,7 @@ const HighlightsSlice = ({ slice }) => {
 
                   <div>
                     <span>{icon.label[0].text}</span>
-                    <PrismicRichText field={icon.title} />
+                    <h4>{icon.title[0].text}</h4>
                     <PrismicRichText field={icon.shortdescription} />
                   </div>
                 </article>

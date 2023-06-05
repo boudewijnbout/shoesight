@@ -25,7 +25,7 @@ const FunstuffSlice = ({ slice }) => {
                   <Label title={article.label[0].text} />
                 </picture>
                 <div>
-                  <PrismicRichText field={article.title} />
+                  <h4>{article.title[0].text}</h4>
                   <PrismicRichText field={article.shortdescription} />
                 </div>
               </article>
