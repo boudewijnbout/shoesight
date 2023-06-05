@@ -103,6 +103,17 @@ interface HomepageDocumentData {
    *
    */
   meta_description: prismicT.KeyTextField;
+  /**
+   * meta_keywords field in *Homepage*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: homepage.meta_keywords
+   * - **Tab**: SEO
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  meta_keywords: prismicT.KeyTextField;
 }
 /**
  * Slice for *Homepage → Slice Zone*

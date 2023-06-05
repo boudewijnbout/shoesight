@@ -2,10 +2,9 @@ import { PrismicRichText } from "@prismicio/react";
 import { createClient } from "../../../prismicio";
 
 const Page = ({ page }) => {
-
     return (
         <>
-            <PrismicRichText field={page.data.title} />
+            <h3>{page.data.title[0].text}</h3>
         </>
     )
 }

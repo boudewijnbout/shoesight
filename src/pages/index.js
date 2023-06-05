@@ -1,9 +1,10 @@
 import { SliceZone } from "@prismicio/react";
 import { createClient } from "../../prismicio";
 import { components } from "../slices";
+import { Head } from "next/document";
 
 const Page = ({ page }) => {
-  return <SliceZone slices={page.data.slices} components={components} />;
+  return <SliceZone slices={page.data.slices} components={components} />
 };
 
 export default Page;

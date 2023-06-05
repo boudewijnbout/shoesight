@@ -26,6 +26,10 @@
       "meta_description": {
         "type": "Text",
         "config": { "label": "meta_description", "placeholder": "" }
+      },
+      "meta_keywords": {
+        "type": "Text",
+        "config": { "label": "meta_keywords", "placeholder": "" }
       }
     }
   }
