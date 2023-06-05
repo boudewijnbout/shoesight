@@ -34,7 +34,7 @@
 	position: relative;
 	margin-bottom: 0.75rem;
 	overflow: hidden;
-	border-radius: 10px;
+	border-radius: var(--border-round);
 	border: 1px solid var(--border-color);
     scroll-snap-align: start;
 }

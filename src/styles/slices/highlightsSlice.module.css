@@ -28,7 +28,7 @@
 	width: inherit;
 	height: inherit;
 	object-fit: cover;
-	border-radius: 10px;
+	border-radius: var(--border-round);
 	margin-bottom: 1rem;
 }
 
