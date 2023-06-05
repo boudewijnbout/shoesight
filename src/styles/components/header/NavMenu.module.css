@@ -24,9 +24,6 @@
 
     .navItems {
         position: relative;
-    }
-
-    .navMenuItem {
-        margin-right: 2rem;
+        gap: 2rem;
     }
 }
