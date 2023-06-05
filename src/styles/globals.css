@@ -97,6 +97,6 @@ ol, ul {
 --------------------------------------------------------------*/
 @media (min-width: 75rem) {
     section {
-        padding: 1.6rem 6.5rem;
+        padding: var(--padding-section-desktop);
     }
 }
