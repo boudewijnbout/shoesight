@@ -28,30 +28,30 @@ body {
 # Sections
 --------------------------------------------------------------*/
 section {
-    padding: 1rem;
+    padding: var(--padding-section);
 }
 
 /*--------------------------------------------------------------
 # Headings
 --------------------------------------------------------------*/
 h1 {
-    font-family: "Cormorant", sans-serif;
+    font-family: var(--font-cormorant);
 }
 
 h2 {
-    font-family: "Satisfy", sans-serif;
+    font-family: var(--font-satisfy);
 }
 
 h3 {
   color: var(--black);
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-poppins);
   font-weight: 600;
   font-size: 1.1rem;
   margin-bottom: 1rem;
 }
 
 h4 {
-  font-family: "Cormorant", sans-serif;
+  font-family: var(--font-cormorant);
   font-size: 1.1rem;
   font-weight: 600;
 }
@@ -60,7 +60,7 @@ h4 {
 # Span
 --------------------------------------------------------------*/
 span {
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font-poppins);
     background-color: var(--red-accent);
     color: #fff;
     font-size: 12.5px;
