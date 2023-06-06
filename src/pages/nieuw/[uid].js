@@ -7,10 +7,13 @@ import Label from "@/components/Label";
 
 // Styles
 import styles from "../../styles/pages/nieuwDetail.module.css";
+import Head from "next/head";
 
 const Page = ({ page }) => {
     const publishDate = page.data.publishdate;
     const date = new Date(publishDate);
+
+    console.log(page);
 
     const publishDateOptions = {
         weekday: 'long',
@@ -23,30 +26,37 @@ const Page = ({ page }) => {
 
     return (
         <>
-            <section className={styles.nieuwDetail}>
-                <article>
-                    <h3>{page.data.title[0].text}</h3>
+            <Head>
+                <title>{page.data.title[0].text}</title>
+                <meta name="description" content={page.data.shortdescription[0].text} />
+            </Head>
 
-                    <div className={styles.publishInformation}>
-                        publisher
-                        <p>{formattedPublishDate}</p>
-                    </div>
+            <main>
+                <section className={styles.nieuwDetail}>
+                    <article>
+                        <h3>{page.data.title[0].text}</h3>
 
-                    <picture>
-                        <PrismicNextImage priority field={page.data.featuredimage} />
-                        <Label title={page.data.label[0].text} />
-                    </picture>
+                        <div className={styles.publishInformation}>
+                            publisher
+                            <p>{formattedPublishDate}</p>
+                        </div>
 
-                    <div className={styles.nieuwDetailBody}>
-                        <p className={styles.introduction}>{page.data.introduction[0].text}</p>
-                        <PrismicRichText field={page.data.body} />
-                    </div>
-                </article>
+                        <picture>
+                            <PrismicNextImage priority field={page.data.featuredimage} />
+                            <Label title={page.data.label[0].text} />
+                        </picture>
 
-                <hr />
+                        <div className={styles.nieuwDetailBody}>
+                            <p className={styles.introduction}>{page.data.introduction[0].text}</p>
+                            <PrismicRichText field={page.data.body} />
+                        </div>
+                    </article>
 
-                <h4>gerelateerde artikelen</h4>
-            </section>
+                    <hr />
+
+                    <h4>gerelateerde artikelen</h4>
+                </section>
+            </main>
         </>
     )
 }
