@@ -1,10 +1,18 @@
 import { SliceZone } from "@prismicio/react";
 import { createClient } from "../../prismicio";
 import { components } from "../slices";
-import { Head } from "next/document";
+import Head from "next/head";
 
-const Page = ({ page }) => {
-  return <SliceZone slices={page.data.slices} components={components} />
+const Page = ({ page, metaTitle, metaDescription }) => {
+  return (
+    <>
+      <Head>
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
+      </Head>
+      <SliceZone slices={page.data.slices} components={components} />
+    </>
+  )
 };
 
 export default Page;
@@ -19,6 +27,8 @@ export async function getStaticProps({ previewData }) {
 
   return {
     props: {
+      metaTitle: page.data.meta_title,
+      metaDescription: page.data.meta_description,
       page,
     },
 
