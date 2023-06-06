@@ -9,7 +9,7 @@ type Simplify<T> = {
 /** Content for Article documents */
 interface ArticleDocumentData {
   /**
-   * Title field in *Article*
+   * title field in *Article*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -20,7 +20,7 @@ interface ArticleDocumentData {
    */
   title: prismicT.RichTextField;
   /**
-   * Label field in *Article*
+   * label field in *Article*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -42,6 +42,28 @@ interface ArticleDocumentData {
    */
   shortdescription: prismicT.RichTextField;
   /**
+   * introduction field in *Article*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article.introduction
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  introduction: prismicT.RichTextField;
+  /**
+   * body field in *Article*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article.body
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  body: prismicT.RichTextField;
+  /**
    * featuredImage field in *Article*
    *
    * - **Field Type**: Image
@@ -52,6 +74,39 @@ interface ArticleDocumentData {
    *
    */
   featuredimage: prismicT.ImageField<never>;
+  /**
+   * publishDate field in *Article*
+   *
+   * - **Field Type**: Timestamp
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article.publishdate
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/timestamp
+   *
+   */
+  publishdate: prismicT.TimestampField;
+  /**
+   * relatedArticles field in *Article*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article.relatedarticles
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  relatedarticles: prismicT.RelationField<"article">;
+  /**
+   * author field in *Article*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article.author
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  author: prismicT.RelationField<"publisher">;
 }
 /**
  * Article document from Prismic
@@ -138,7 +193,50 @@ export type HomepageDocument<Lang extends string = string> =
     "homepage",
     Lang
   >;
-export type AllDocumentTypes = ArticleDocument | HomepageDocument;
+/** Content for Author documents */
+interface PublisherDocumentData {
+  /**
+   * name field in *Author*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: publisher.name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  name: prismicT.RichTextField;
+  /**
+   * featuredImage field in *Author*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: publisher.featuredimage
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  featuredimage: prismicT.ImageField<never>;
+}
+/**
+ * Author document from Prismic
+ *
+ * - **API ID**: `publisher`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PublisherDocument<Lang extends string = string> =
+  prismicT.PrismicDocumentWithUID<
+    Simplify<PublisherDocumentData>,
+    "publisher",
+    Lang
+  >;
+export type AllDocumentTypes =
+  | ArticleDocument
+  | HomepageDocument
+  | PublisherDocument;
 /**
  * Primary content in FunstuffSlice → Primary
  *
@@ -339,6 +437,8 @@ declare module "@prismicio/client" {
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,
       HomepageDocument,
+      PublisherDocumentData,
+      PublisherDocument,
       AllDocumentTypes,
       FunstuffSliceSliceDefaultPrimary,
       FunstuffSliceSliceDefaultItem,

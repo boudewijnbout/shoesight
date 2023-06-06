@@ -1,0 +1,104 @@
+/*--------------------------------------------------------------
+# Nieuw detailpage
+--------------------------------------------------------------*/
+.nieuwDetail {
+    justify-content: center;
+    max-width: 65rem;
+    margin: 10rem auto;
+}
+
+.nieuwDetail h3 {
+    font-size: 1.3rem;
+}
+
+/*--------------------------------------------------------------
+# Nieuw article publish information
+--------------------------------------------------------------*/
+.publishInformation {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+}
+
+/*--------------------------------------------------------------
+# Nieuw detailpage article
+--------------------------------------------------------------*/
+.nieuwDetail picture {
+    width: 100%;
+    height: 15rem;
+    display: block;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    position: relative;
+}
+
+.nieuwDetail img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Article introduction text */
+.introduction {
+    font-family: "Cormorant", sans-serif;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Artice body text */
+.nieuwDetailBody {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.8rem;
+    font-size: 0.95rem;
+}
+
+/*--------------------------------------------------------------
+# Nieuw article seperator line
+--------------------------------------------------------------*/
+.nieuwDetail hr {
+    border: 1px solid var(--border-color);
+    margin: 1rem 0;
+}
+
+/*--------------------------------------------------------------
+# Media querys
+--------------------------------------------------------------*/
+@media (min-width: 32rem) {
+    .nieuwDetailBody {
+        margin: 0 4rem;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 45rem) {
+    .nieuwDetail h3 {
+        font-size: 1.65rem;
+    }
+
+    .nieuwDetailBody {
+        width: 35rem;
+        margin: 0 auto;
+    }
+
+    .nieuwDetail picture {
+        height: 25rem;
+    }
+}
+
+@media (min-width: 62rem) {
+    .nieuwDetail {
+        margin: 11.5rem auto;
+    }
+}
+
+@media (min-width: 75rem) {
+    .nieuwDetailBody {
+        width: auto;
+        margin: 0 4rem;
+    }
+}

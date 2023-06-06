@@ -3,12 +3,13 @@
   "label": "Article",
   "repeatable": true,
   "status": true,
+  "format": "custom",
   "json": {
     "Main": {
       "title": {
         "type": "StructuredText",
         "config": {
-          "label": "Title",
+          "label": "title",
           "placeholder": "",
           "allowTargetBlank": true,
           "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
@@ -16,12 +17,12 @@
       },
       "uid": {
         "type": "UID",
-        "config": { "label": "Slug", "placeholder": "" }
+        "config": { "label": "slug", "placeholder": "" }
       },
       "label": {
         "type": "StructuredText",
         "config": {
-          "label": "Label",
+          "label": "label",
           "placeholder": "",
           "allowTargetBlank": true,
           "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
@@ -36,12 +37,50 @@
           "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
       },
+      "introduction": {
+        "type": "StructuredText",
+        "config": {
+          "label": "introduction",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "body": {
+        "type": "StructuredText",
+        "config": {
+          "label": "body",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
       "featuredimage": {
         "type": "Image",
         "config": {
           "label": "featuredImage",
           "constraint": {},
           "thumbnails": []
+        }
+      },
+      "publishdate": {
+        "type": "Timestamp",
+        "config": { "label": "publishDate", "placeholder": "" }
+      },
+      "relatedarticles": {
+        "type": "Link",
+        "config": {
+          "label": "relatedArticles",
+          "select": "document",
+          "customtypes": ["article"]
+        }
+      },
+      "author": {
+        "type": "Link",
+        "config": {
+          "label": "author",
+          "select": "document",
+          "customtypes": ["publisher"]
         }
       }
     }

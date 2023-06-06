@@ -1,10 +1,52 @@
-import { PrismicRichText } from "@prismicio/react";
+import { PrismicNextImage } from "@prismicio/next";
 import { createClient } from "../../../prismicio";
+import { PrismicRichText } from "@prismicio/react";
+
+// Components
+import Label from "@/components/Label";
+
+// Styles
+import styles from "../../styles/pages/nieuwDetail.module.css";
 
 const Page = ({ page }) => {
+    const publishDate = page.data.publishdate;
+    const date = new Date(publishDate);
+
+    const publishDateOptions = {
+        weekday: 'long',
+        day: 'numeric',
+        month: 'long',
+    };
+
+    // Format publish date to NL format
+    const formattedPublishDate = date.toLocaleString('nl-NL', publishDateOptions);
+
     return (
         <>
-            <h3>{page.data.title[0].text}</h3>
+            <section className={styles.nieuwDetail}>
+                <article>
+                    <h3>{page.data.title[0].text}</h3>
+
+                    <div className={styles.publishInformation}>
+                        publisher
+                        <p>{formattedPublishDate}</p>
+                    </div>
+
+                    <picture>
+                        <PrismicNextImage priority field={page.data.featuredimage} />
+                        <Label title={page.data.label[0].text} />
+                    </picture>
+
+                    <div className={styles.nieuwDetailBody}>
+                        <p className={styles.introduction}>{page.data.introduction[0].text}</p>
+                        <PrismicRichText field={page.data.body} />
+                    </div>
+                </article>
+
+                <hr />
+
+                <h4>gerelateerde artikelen</h4>
+            </section>
         </>
     )
 }
