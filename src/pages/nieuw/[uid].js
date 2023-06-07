@@ -10,10 +10,10 @@ import styles from "../../styles/pages/nieuwDetail.module.css";
 import Head from "next/head";
 
 const Page = ({ page }) => {
+    const article = page.data;
+
     const publishDate = page.data.publishdate;
     const date = new Date(publishDate);
-
-    console.log(page.data.relatedarticles);
 
     const publishDateOptions = {
         weekday: 'long',
@@ -27,14 +27,14 @@ const Page = ({ page }) => {
     return (
         <>
             <Head>
-                <title>{page.data.title[0].text}</title>
-                <meta name="description" content={page.data.shortdescription[0].text} />
+                <title>{article.title[0].text}</title>
+                <meta name="description" content={article.shortdescription[0].text} />
             </Head>
 
             <main>
                 <section className={styles.nieuwDetail}>
                     <article>
-                        <h3>{page.data.title[0].text}</h3>
+                        <h3>{article.title[0].text}</h3>
 
                         <div className={styles.publishInformation}>
                             publisher
@@ -42,38 +42,28 @@ const Page = ({ page }) => {
                         </div>
 
                         <picture>
-                            <PrismicNextImage priority field={page.data.featuredimage} />
-                            <Label title={page.data.label[0].text} />
+                            <PrismicNextImage priority field={article.featuredimage} />
+                            <Label title={article.label[0].text} />
                         </picture>
 
                         <div className={styles.nieuwDetailBody}>
-                            <p className={styles.introduction}>{page.data.introduction[0].text}</p>
-                            <PrismicRichText field={page.data.body} />
+                            <p className={styles.introduction}>{article.introduction[0].text}</p>
+                            <PrismicRichText field={article.body} />
                         </div>
                     </article>
 
                     <hr />
 
                     <h4>gerelateerde artikelen</h4>
-
-                    {page.data.relatedarticles.map((article) => {
-                        console.log(article);
-
-                        return (
-                            <>
-                                {article.articlelink.data.title[0].text}
-                            </>
-                        );
-                    })}
                 </section>
             </main>
         </>
     )
 }
 
-export async function getStaticProps({ previewData, params }) {
+export async function getStaticProps({ params }) {
     const { uid } = params;
-    const client = createClient({ previewData });
+    const client = createClient();
     const page = await client.getByUID("article", uid, {
         fetchLinks: [
             "article.title"
@@ -83,7 +73,9 @@ export async function getStaticProps({ previewData, params }) {
     return {
         props: {
             page,
-        }
+        },
+
+        revalidate: 60,
     }
 }
 
@@ -91,13 +83,14 @@ export async function getStaticPaths() {
     const client = createClient();
 
     const res = await client.getByType("article");
+
     const articleUids = res.results.map((result) => result.uid);
 
     const paths = articleUids.map((uid) => ({ params: { uid } }));
 
     return {
         paths,
-        fallback: true,
+        fallback: false,
     }
 }
 
