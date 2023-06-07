@@ -56,16 +56,6 @@ const Page = ({ page }) => {
     setFilteredData(filteredBySearchQuery);
   };
 
-  // const resetFilter = () => {
-  //   setActiveFilters([]);
-  //   const searchQuery = query.toLowerCase();
-  //   const filtered = page.filter((article) => {
-  //     const title = article.data.title[0].text.toLowerCase();
-  //     return title.includes(searchQuery);
-  //   });
-  //   setFilteredData(filtered);
-  // };
-
   return (
     <>
       <main>
@@ -75,8 +65,8 @@ const Page = ({ page }) => {
           </h3>
 
           <div className={styles.filterButtons}>
-            <p>Label category</p>
-            {/* <button onClick={resetFilter}>Alle artikelen</button> */}
+            <p>Categorie</p>
+
             {filters.map((filter) => (
               <button
                 key={filter}

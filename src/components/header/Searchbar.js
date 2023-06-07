@@ -4,8 +4,6 @@ import { useRouter } from "next/router";
 const SearchBar = ({ onSubmit }) => {
   const router = useRouter();
   const [searchTerm, setSearchTerm] = useState("");
-  //   const [results, setResults] = useState([]);
-  //   console.log(searchTerm);
 
   const handleSearch = (e) => {
     e.preventDefault();
