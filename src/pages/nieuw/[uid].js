@@ -13,7 +13,7 @@ const Page = ({ page }) => {
     const publishDate = page.data.publishdate;
     const date = new Date(publishDate);
 
-    console.log(page);
+    console.log(page.data.relatedarticles);
 
     const publishDateOptions = {
         weekday: 'long',
@@ -55,6 +55,16 @@ const Page = ({ page }) => {
                     <hr />
 
                     <h4>gerelateerde artikelen</h4>
+
+                    {page.data.relatedarticles.map((article) => {
+                        console.log(article);
+
+                        return (
+                            <>
+                                {article.articlelink.data.title[0].text}
+                            </>
+                        );
+                    })}
                 </section>
             </main>
         </>
@@ -64,7 +74,11 @@ const Page = ({ page }) => {
 export async function getStaticProps({ previewData, params }) {
     const { uid } = params;
     const client = createClient({ previewData });
-    const page = await client.getByUID('article', uid);
+    const page = await client.getByUID("article", uid, {
+        fetchLinks: [
+            "article.title"
+        ]
+    });
 
     return {
         props: {

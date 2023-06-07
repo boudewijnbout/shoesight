@@ -67,20 +67,28 @@
         "type": "Timestamp",
         "config": { "label": "publishDate", "placeholder": "" }
       },
-      "relatedarticles": {
-        "type": "Link",
-        "config": {
-          "label": "relatedArticles",
-          "select": "document",
-          "customtypes": ["article"]
-        }
-      },
       "author": {
         "type": "Link",
         "config": {
           "label": "author",
           "select": "document",
           "customtypes": ["publisher"]
+        }
+      },
+      "relatedarticles": {
+        "type": "Group",
+        "config": {
+          "label": "relatedArticles",
+          "fields": {
+            "articlelink": {
+              "type": "Link",
+              "config": {
+                "label": "articleLink",
+                "select": "document",
+                "customtypes": ["article"]
+              }
+            }
+          }
         }
       }
     }

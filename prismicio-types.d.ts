@@ -86,17 +86,6 @@ interface ArticleDocumentData {
    */
   publishdate: prismicT.TimestampField;
   /**
-   * relatedArticles field in *Article*
-   *
-   * - **Field Type**: Content Relationship
-   * - **Placeholder**: *None*
-   * - **API ID Path**: article.relatedarticles
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-   *
-   */
-  relatedarticles: prismicT.RelationField<"article">;
-  /**
    * author field in *Article*
    *
    * - **Field Type**: Content Relationship
@@ -107,6 +96,35 @@ interface ArticleDocumentData {
    *
    */
   author: prismicT.RelationField<"publisher">;
+  /**
+   * relatedArticles field in *Article*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article.relatedarticles[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/group
+   *
+   */
+  relatedarticles: prismicT.GroupField<
+    Simplify<ArticleDocumentDataRelatedarticlesItem>
+  >;
+}
+/**
+ * Item in Article → relatedArticles
+ *
+ */
+export interface ArticleDocumentDataRelatedarticlesItem {
+  /**
+   * articleLink field in *Article → relatedArticles*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article.relatedarticles[].articlelink
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  articlelink: prismicT.RelationField<"article">;
 }
 /**
  * Article document from Prismic
@@ -433,6 +451,7 @@ declare module "@prismicio/client" {
   namespace Content {
     export type {
       ArticleDocumentData,
+      ArticleDocumentDataRelatedarticlesItem,
       ArticleDocument,
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,
