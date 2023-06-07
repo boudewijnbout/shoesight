@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import {useCallback} from "react";
+import { useCallback } from "react";
 
 import styles from "@/styles/components/header/Header.module.css";
 
@@ -52,7 +52,7 @@ const Header = () => {
         <NavMenu />
 
         {/* SearchBar */}
-        <Searchbar label="Artikelen zoeken..." />
+        <Searchbar />
 
         {/* Hamburger icon (mobile) */}
         <HamburgerIcon />

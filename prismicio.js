@@ -18,9 +18,9 @@ export const repositoryName = config.repositoryName;
 const routes = [
   {
     type: "homepage",
-    path: "/"
-  }
-]
+    path: "/",
+  },
+];
 
 /**
  * Creates a Prismic client for the project's repository. The client is used to
