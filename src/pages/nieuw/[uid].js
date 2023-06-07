@@ -1,6 +1,7 @@
 import { PrismicNextImage } from "@prismicio/next";
 import { createClient } from "../../../prismicio";
 import { PrismicRichText } from "@prismicio/react";
+import Link from "next/link";
 
 // Components
 import Label from "@/components/Label";
@@ -11,7 +12,6 @@ import Head from "next/head";
 
 const Page = ({ page }) => {
     const article = page.data;
-
     const publishDate = page.data.publishdate;
     const date = new Date(publishDate);
 
@@ -32,8 +32,10 @@ const Page = ({ page }) => {
             </Head>
 
             <main>
+
+                {/* Nieuw detail article */}
                 <section className={styles.nieuwDetail}>
-                    <article>
+                    <article className={styles.nieuwDetailArticle}>
                         <h3>{article.title[0].text}</h3>
 
                         <div className={styles.publishInformation}>
@@ -54,7 +56,30 @@ const Page = ({ page }) => {
 
                     <hr />
 
-                    <h4>gerelateerde artikelen</h4>
+                    {/* Related articles */}
+                    <div className={styles.relatedArticles}>
+                        <h4>gerelateerde artikelen</h4>
+
+                        <div>
+                            {article.relatedarticles.map((relatedArticle) => {
+                                return (
+                                    <>
+                                        <Link href={`/nieuw/${relatedArticle.articlelink.data.uid}`}>
+                                            <article>
+                                                <picture>
+                                                    <PrismicNextImage field={relatedArticle.articlelink.data.featuredimage} />
+                                                    <Label title={relatedArticle.articlelink.data.label[0].text} />
+                                                </picture>
+
+                                                <h5>{relatedArticle.articlelink.data.title[0].text}</h5>
+                                                <PrismicRichText field={relatedArticle.articlelink.data.shortdescription} />
+                                            </article>
+                                        </Link>
+                                    </>
+                                )
+                            })}
+                        </div>
+                    </div>
                 </section>
             </main>
         </>
@@ -66,7 +91,7 @@ export async function getStaticProps({ params }) {
     const client = createClient();
     const page = await client.getByUID("article", uid, {
         fetchLinks: [
-            "article.title"
+            "article.title, article.featuredimage, article.label, article.shortdescription, article.uid"
         ]
     });
 
