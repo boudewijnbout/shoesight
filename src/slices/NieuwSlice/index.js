@@ -1,11 +1,12 @@
 import { PrismicRichText } from "@prismicio/react";
-import { PrismicNextImage } from "@prismicio/next";
+import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 
 // Styles
 import styles from "../../styles/slices/nieuwSlice.module.css";
 
 // Components
 import Label from "@/components/Label";
+import Link from "next/link";
 
 /**
  * @typedef {import("@prismicio/client").Content.NieuwSliceSlice} NieuwSliceSlice
@@ -23,14 +24,16 @@ const NieuwSlice = ({ slice }) => {
 				{articles.map((article) => {
 					return (
 						<>
-							<article>
-								<picture>
-									<PrismicNextImage priority sizes="(max-width: 30rem) 100vw, (max-width: 75rem) 33vw, 33vw" field={article.featuredimage} />
-									<Label title={article.label[0].text} />
-								</picture>
-								<h4>{article.title[0].text}</h4>
-								<PrismicRichText field={article.shortdescription} />
-							</article>
+							<Link href={`/nieuw/${article.uid}`}>
+								<article>
+									<picture>
+										<PrismicNextImage priority sizes="(max-width: 30rem) 100vw, (max-width: 75rem) 33vw, 33vw" field={article.featuredimage} />
+										<Label title={article.label[0].text} />
+									</picture>
+									<h4>{article.title[0].text}</h4>
+									<PrismicRichText field={article.shortdescription} />
+								</article>
+							</Link>
 						</>
 					);
 				})}
