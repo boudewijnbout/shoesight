@@ -22,7 +22,7 @@ const HamburgerIcon = () => {
 
     return (
         <>
-            <button className={styles.hamburgerToggle} onClick={toggleMenu}><Hamburger size={32} color="#000000" rounded /></button>
+            <button className={styles.hamburgerToggle} onClick={toggleMenu}><Hamburger size={32} color="#000000" rounded   label="Mobiel menu" /></button>
             <NavMenuMobile open={open} />
         </>
     )
