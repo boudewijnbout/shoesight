@@ -1,11 +1,15 @@
 import styles from "@/styles/components/header/NavMenu.module.css";
 
+import { useState } from "react";
+
 // Components
 import Dropdown from "./Dropdown";
 import DropdownItem from "./DropdownItem";
 import NavItem from "./NavItem";
 
 const NavMenu = () => {
+  const [openDropdown, setOpenDropdown] = useState(null);
+
   return (
     <>
       <nav className={styles.nav}>
@@ -14,7 +18,7 @@ const NavMenu = () => {
 
           {/* Nieuw link + dropdown */}
           <li className={styles.navMenuItem}>
-            <Dropdown title="nieuw">
+            <Dropdown title="nieuw" openDropdown={openDropdown} setOpenDropdown={setOpenDropdown}>
               <DropdownItem linkUrl="/" title="trends" />
               <DropdownItem linkUrl="/" title="brands" />
             </Dropdown>
@@ -22,7 +26,7 @@ const NavMenu = () => {
 
           {/* Fun stuff link + dropdown */}
           <li className={styles.navMenuItem}>
-            <Dropdown title="fun stuff">
+            <Dropdown title="fun stuff" openDropdown={openDropdown} setOpenDropdown={setOpenDropdown}>
               <DropdownItem linkUrl="/" title="top 10" />
               <DropdownItem linkUrl="/" title="facts & figures" />
               <DropdownItem linkUrl="/" title="flashback" />
@@ -31,7 +35,7 @@ const NavMenu = () => {
 
           {/* Highlights link + dropdown */}
           <li className={styles.navMenuItem}>
-            <Dropdown title="highlights">
+            <Dropdown title="highlights" openDropdown={openDropdown} setOpenDropdown={setOpenDropdown}>
               <DropdownItem linkUrl="/" title="icons" />
               <DropdownItem linkUrl="/" title="shoe of the day" />
               <DropdownItem linkUrl="/" title="media" />
@@ -40,7 +44,7 @@ const NavMenu = () => {
 
           {/* Over ons link + dropdown */}
           <li className={styles.navMenuItem}>
-            <Dropdown title="over ons">
+            <Dropdown title="over ons" openDropdown={openDropdown} setOpenDropdown={setOpenDropdown}>
               <DropdownItem linkUrl="/" title="shoesight" />
               <DropdownItem linkUrl="/" title="ads & collabs" />
               <DropdownItem linkUrl="/" title="contact" />
