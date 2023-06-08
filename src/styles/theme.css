@@ -5,12 +5,17 @@
     --black: #121212;
     --red-accent: #D9232D;
     --white: #FFFFFF;
+
+    /* Borders */
     --border-color: #E5E5E5;
     --border-round: 10px;
+
+    /* Paddings */
     --padding-section: 1rem;
     --padding-section-desktop: 1.6rem 6.5rem;
+
+    /* Fonts */
     --font-cormorant: "Cormorant", sans-serif ;
     --font-satisfy: "Satisfy", sans-serif; 
     --font-poppins: "Poppins", sans-serif; 
-
 }

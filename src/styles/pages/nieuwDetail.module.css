@@ -4,7 +4,7 @@
 .nieuwDetail {
     justify-content: center;
     max-width: 65rem;
-    margin: 10rem auto;
+    margin: 10rem auto 0 auto;
 }
 
 .nieuwDetail h3 {
@@ -25,12 +25,16 @@
 /*--------------------------------------------------------------
 # Nieuw detailpage article
 --------------------------------------------------------------*/
-.nieuwDetail picture {
+.nieuwDetailArticle picture {
     width: 100%;
     height: 15rem;
+}
+
+.nieuwDetail picture {
+    width: 100%;
     display: block;
     border: 1px solid var(--border-color);
-    border-radius: 10px;
+    border-radius: var(--border-round);
     position: relative;
 }
 
@@ -38,12 +42,12 @@
     width: inherit;
     height: inherit;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: var(--border-round);
 }
 
 /* Article introduction text */
 .introduction {
-    font-family: "Cormorant", sans-serif;
+    font-family: var(--font-cormorant);
     font-size: 1.2rem;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
@@ -52,7 +56,7 @@
 
 /* Artice body text */
 .nieuwDetailBody {
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font-poppins);
     line-height: 1.8rem;
     font-size: 0.95rem;
 }
@@ -62,7 +66,46 @@
 --------------------------------------------------------------*/
 .nieuwDetail hr {
     border: 1px solid var(--border-color);
-    margin: 1rem 0;
+    margin: 1.5rem 0;
+}
+
+/*--------------------------------------------------------------
+# Related articles
+--------------------------------------------------------------*/
+.relatedArticles h4 {
+    font-size: 1.1rem;
+    font-family: var(--font-poppins);
+    margin-bottom: 1.5rem;
+}
+
+.relatedArticles article {
+    margin-bottom: 1.5rem;
+}
+
+.relatedArticles article:hover img {
+    transform: scale(1.05);
+}
+
+.relatedArticles picture {
+    width: 100%;
+    display: block;
+    height: 10rem;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.relatedArticles img {
+    transition: transform 200ms;
+}
+
+.relatedArticles h5 {
+    margin-bottom: 0.75rem;
+}
+
+.relatedArticles p {
+    font-size: 0.95rem;
+    font-family: var(--font-cormorant);
 }
 
 /*--------------------------------------------------------------
@@ -85,14 +128,24 @@
         margin: 0 auto;
     }
 
-    .nieuwDetail picture {
+    .nieuwDetailArticle picture {
         height: 25rem;
+    }
+
+    .relatedArticles div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.5rem;
+    }
+
+    .relatedArticles picture {
+        height: 12rem;
     }
 }
 
 @media (min-width: 62rem) {
     .nieuwDetail {
-        margin: 11.5rem auto;
+        margin: 11.5rem auto 0 auto;
     }
 }
 

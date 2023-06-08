@@ -34,7 +34,7 @@ section {
 /*--------------------------------------------------------------
 # Headings
 --------------------------------------------------------------*/
-h1 {
+h1, h4, h5 {
     font-family: var(--font-cormorant);
 }
 
@@ -43,17 +43,14 @@ h2 {
 }
 
 h3 {
-  color: var(--black);
-  font-family: var(--font-poppins);
-  font-weight: 600;
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
+    color: var(--black);
+    font-family: var(--font-poppins);
+    margin-bottom: 1rem;
 }
 
-h4 {
-  font-family: var(--font-cormorant);
-  font-size: 1.1rem;
-  font-weight: 600;
+h3, h4, h5 {
+    font-weight: 600;
+    font-size: 1.1rem;
 }
 
 /*--------------------------------------------------------------
