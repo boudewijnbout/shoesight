@@ -10,11 +10,7 @@ import SearchBar from "./Searchbar";
 
 const NavMenuMobile = ({ open }) => {
   const [openDropdown, setOpenDropdown] = useState(null);
-
-  const closeOtherDropdowns = (currentTitle) => {
-    setOpenDropdown(currentTitle);
-  }
-
+  
   return (
     <>
       <nav className={`${styles.nav} ${open ? styles.open : ''}`}>

@@ -10,10 +10,6 @@ import NavItem from "./NavItem";
 const NavMenu = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
 
-  const closeOtherDropdowns = (currentTitle) => {
-    setOpenDropdown(currentTitle);
-  }
-
   return (
     <>
       <nav className={styles.nav}>
