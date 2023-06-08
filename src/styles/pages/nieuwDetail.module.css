@@ -34,7 +34,7 @@
     width: 100%;
     display: block;
     border: 1px solid var(--border-color);
-    border-radius: 10px;
+    border-radius: var(--border-round);
     position: relative;
 }
 
@@ -42,7 +42,7 @@
     width: inherit;
     height: inherit;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: var(--border-round);
 }
 
 /* Article introduction text */
