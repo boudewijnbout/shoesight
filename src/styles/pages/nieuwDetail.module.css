@@ -47,7 +47,7 @@
 
 /* Article introduction text */
 .introduction {
-    font-family: "Cormorant", sans-serif;
+    font-family: var(--font-cormorant);
     font-size: 1.2rem;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
@@ -56,7 +56,7 @@
 
 /* Artice body text */
 .nieuwDetailBody {
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font-poppins);
     line-height: 1.8rem;
     font-size: 0.95rem;
 }
@@ -74,7 +74,7 @@
 --------------------------------------------------------------*/
 .relatedArticles h4 {
     font-size: 1.1rem;
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font-poppins);
     margin-bottom: 1.5rem;
 }
 
@@ -105,7 +105,7 @@
 
 .relatedArticles p {
     font-size: 0.95rem;
-    font-family: "Cormorant", sans-serif;
+    font-family: var(--font-cormorant);
 }
 
 /*--------------------------------------------------------------
