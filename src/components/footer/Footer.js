@@ -27,7 +27,7 @@ const Footer = () => {
           <p className={styles.copyright}>© 2023. Alle rechten voorbehouden</p>
 
           <div className={styles.socialMediaIcons}>
-            <p>Volg Shoesight</p>
+            <p>Volg <span>Shoesight</span></p>
             <SocialMediaIcons />
           </div>
         </div>
