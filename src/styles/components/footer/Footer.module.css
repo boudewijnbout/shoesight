@@ -21,6 +21,7 @@
 .logo {
   text-align: center;
 }
+
 .logo h2 {
   font-family: "Cormorant", serif;
   font-size: 2rem;
@@ -77,6 +78,12 @@
 
 .socialMediaIcons p {
   text-align: center;
+}
+
+.socialMediaIcons span {
+  background: none;
+  padding: 0;
+  text-transform: uppercase;
 }
 
 .copyright {
