@@ -10,12 +10,14 @@
 	display: grid;
 }
 
-.iconCard {
-	position: relative;
+.iconsWrapper {
+	display: grid;
+	gap: 1.5rem;
+	grid-template-rows: 1fr 1fr;
 }
 
-.iconCard:nth-child(1) {
-	margin-bottom: 1.5rem;
+.iconCard {
+	position: relative;
 }
 
 .iconCard picture {
@@ -80,7 +82,7 @@
 
 @media (min-width: 81.25rem) {
 	.iconCard picture {
-		height: 15rem;
-		width: 20rem;
+		height: 100%;
+		width: 100%;
 	}
 }
