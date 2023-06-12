@@ -20,24 +20,26 @@ const NieuwSlice = ({ slice }) => {
 		<section className={styles.nieuw}>
 			<PrismicRichText field={slice.primary.title} />
 
-			<div>
+			<ul>
 				{articles.map((article) => {
 					return (
-						<>
+						<li key={article.uid}>
 							<Link href={`/nieuw/${article.uid}`}>
 								<article>
-									<picture>
-										<PrismicNextImage priority sizes="(max-width: 30rem) 100vw, (max-width: 75rem) 33vw, 33vw" field={article.featuredimage} />
+									<div>
+										<picture>
+											<PrismicNextImage priority sizes="(max-width: 30rem) 100vw, (max-width: 75rem) 33vw, 33vw" field={article.featuredimage} />
+										</picture>
 										<Label title={article.label[0].text} />
-									</picture>
+									</div>
 									<h4>{article.title[0].text}</h4>
 									<PrismicRichText field={article.shortdescription} />
 								</article>
 							</Link>
-						</>
+						</li>
 					);
 				})}
-			</div>
+			</ul>
 		</section>
 	);
 };

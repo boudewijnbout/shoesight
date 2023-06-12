@@ -4,12 +4,12 @@ import styles from "../styles/components/HighlightArticleLarge.module.css";
 const HighlightArticleLarge = ({ imageUrl, label }) => {
     return (
         <>
-            <article className={styles.highlightArticle}>
+            <div className={styles.highlightArticle}>
                 <picture>
                     <PrismicNextImage field={imageUrl} />
-                    <span className={styles.highlightArticleLabel}>{label}</span>
                 </picture>
-            </article>
+                <span className={styles.highlightArticleLabel}>{label}</span>
+            </div>
         </>
 
     )

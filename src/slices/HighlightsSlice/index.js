@@ -23,8 +23,7 @@ const HighlightsSlice = ({ slice }) => {
           {icons.map((icon) => {
 
             return (
-              <>
-                <article className={styles.iconCard}>
+                <article key={icon.uid} className={styles.iconCard}>
                   <picture>
                     <PrismicNextImage field={icon.featuredimage} />
                   </picture>
@@ -35,7 +34,6 @@ const HighlightsSlice = ({ slice }) => {
                     <PrismicRichText field={icon.shortdescription} />
                   </div>
                 </article>
-              </>
             )
           })}
         </div>

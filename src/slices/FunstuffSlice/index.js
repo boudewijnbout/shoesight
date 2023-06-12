@@ -18,18 +18,16 @@ const FunstuffSlice = ({ slice }) => {
       <div className={styles.funstuffContainer}>
         {articles.map((article) => {
           return (
-            <>
-              <article className={styles.article}>
-                <picture>
-                  <PrismicNextImage field={article.featuredimage} />
-                  <Label title={article.label[0].text} />
-                </picture>
-                <div>
-                  <h4>{article.title[0].text}</h4>
-                  <PrismicRichText field={article.shortdescription} />
-                </div>
-              </article>
-            </>
+            <article key={article.uid} className={styles.article}>
+              <picture>
+                <PrismicNextImage field={article.featuredimage} />
+              </picture>
+              <Label title={article.label[0].text} />
+              <div>
+                <h4>{article.title[0].text}</h4>
+                <PrismicRichText field={article.shortdescription} />
+              </div>
+            </article>
           );
         })}
       </div>

@@ -5,7 +5,7 @@
 	margin-top: 10rem;
 }
 
-.nieuw div {
+.nieuw ul {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 1.5rem;
@@ -15,7 +15,7 @@
 }
 
 /* Disable horizontal scrollbar */
-.nieuw div::-webkit-scrollbar {
+.nieuw ul::-webkit-scrollbar {
     display: none;
 }
 
@@ -25,6 +25,10 @@
 .nieuw article {
 	display: flex;
 	flex-direction: column;
+}
+
+.nieuw div {
+	position: relative;
 }
 
 /* Article featured image */
