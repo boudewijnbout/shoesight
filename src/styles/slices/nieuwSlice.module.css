@@ -31,28 +31,8 @@
 .nieuw picture {
 	width: 15rem;
 	height: 10rem;
-	position: relative;
 	margin-bottom: 0.75rem;
-	overflow: hidden;
-	border-radius: var(--border-round);
-	border: 1px solid var(--border-color);
     scroll-snap-align: start;
-}
-
-.nieuw article:hover img {
-	transform: scale(1.05);
-}
-
-.nieuw img {
-	width: inherit;
-	height: inherit;
-	object-fit: cover;
-	transition: transform 200ms;
-}
-
-/* Article title */
-.nieuw h4 {
-	margin-bottom: 0.75rem;
 }
 
 /* Article description */
