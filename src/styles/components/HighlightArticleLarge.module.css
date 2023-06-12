@@ -1,6 +1,13 @@
+/*--------------------------------------------------------------
+# Highlight article large
+--------------------------------------------------------------*/
 .highlightArticle {
 	position: relative;
 	margin-bottom: 1.5rem;
+}
+
+.highlightArticle:hover img {
+	transform: scale(1.05);
 }
 
 .highlightArticle picture {
@@ -8,14 +15,6 @@
 	height: 20rem;
 	position: relative;
 	display: block;
-}
-
-.highlightArticle img {
-	width: inherit;
-	height: inherit;
-	border: 1px solid var(--border-color);
-	border-radius: 10px;
-	object-fit: cover;
 }
 
 /* Article label */
@@ -34,6 +33,9 @@
 	transform-origin: 0 0;
 }
 
+/*--------------------------------------------------------------
+# Media querys
+--------------------------------------------------------------*/
 @media (min-width: 40rem) {
 	.highlightArticle picture {
 		height: 100%;
