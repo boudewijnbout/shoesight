@@ -1,12 +1,14 @@
-import styles from "@/styles/components/SocialMediaIcons.module.css";
-
 import Image from "next/image";
 import Link from "next/link";
+
+// Styles
+import styles from "@/styles/components/SocialMediaIcons.module.css";
 
 const SocialMediaIcons = () => {
   return (
     <>
       <div className={styles.socialMediaIcons}>
+
         {/* Instagram logo */}
         <Link href="/">
           <Image

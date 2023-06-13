@@ -1,12 +1,13 @@
 import { useState } from "react";
 
-import styles from "@/styles/components/header/NavMenuMobile.module.css";
-
 // Components
 import NavItem from "./NavItem";
 import Dropdown from "./Dropdown";
 import DropdownItem from "./DropdownItem";
 import SearchBar from "./Searchbar";
+
+// Styles
+import styles from "@/styles/components/header/NavMenuMobile.module.css";
 
 const NavMenuMobile = ({ open }) => {
   const [openDropdown, setOpenDropdown] = useState(null);

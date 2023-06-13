@@ -1,13 +1,13 @@
-import { useEffect, useRef, useState } from "react";
-import {useCallback} from "react";
-
-import styles from "@/styles/components/header/Header.module.css";
+import { useEffect, useState } from "react";
 
 // Components
 import SocialMediaIcons from "../SocialMediaIcons";
 import NavMenu from "./NavMenu";
 import Searchbar from "./Searchbar";
 import HamburgerIcon from "./HamburgerIcon";
+
+// Styles
+import styles from "@/styles/components/header/Header.module.css";
 
 const Header = () => {
   const [isNavbarVisible, setNavbarVisible] = useState(true);

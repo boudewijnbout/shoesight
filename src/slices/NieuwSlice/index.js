@@ -18,8 +18,11 @@ const NieuwSlice = ({ slice }) => {
 
 	return (
 		<section className={styles.nieuw}>
+
+			{/* Section title */}
 			<PrismicRichText field={slice.primary.title} />
 
+			{/* Articles */}
 			<ul>
 				{articles.map((article) => {
 					return (

@@ -1,6 +1,6 @@
 import { PrismicRichText } from "@prismicio/react";
 import styles from "../../styles/slices/highlightsSlice.module.css";
-import HighlightArticleLarge from "@/components/highlightArticleLarge";
+import HighlightArticleLarge from "@/components/HighlightArticleLarge";
 import { PrismicNextImage } from "@prismicio/next";
 
 /**
@@ -14,8 +14,11 @@ const HighlightsSlice = ({ slice }) => {
 
   return (
     <section className={styles.section}>
+
+      {/* Section title */}
       <PrismicRichText field={slice.primary.title} />
 
+      {/* Highlight article & icons */}
       <div className={styles.highlightsArticleWrapper}>
         <HighlightArticleLarge imageUrl={articles[0].featuredimage} label={articles[0].label[0].text} />
 

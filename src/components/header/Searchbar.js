@@ -1,3 +1,4 @@
+// Styles
 import styles from "@/styles/components/header/Searchbar.module.css";
 
 const SearchBar = ({ label }) => {

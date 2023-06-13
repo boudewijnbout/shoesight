@@ -1,6 +1,7 @@
-import styles from "@/styles/components/header/NavItem.module.css";
-
 import Link from "next/link";
+
+// Styles
+import styles from "@/styles/components/header/NavItem.module.css";
 
 const NavItem = ({ linkUrl, title, children }) => {
     return (
