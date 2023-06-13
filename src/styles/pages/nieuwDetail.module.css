@@ -30,6 +30,11 @@
     height: 15rem;
 }
 
+/* Disable hover effect */
+.nieuwDetailArticle:hover img {
+    transform: none;
+}
+
 .nieuwDetail picture {
     width: 100%;
     display: block;
