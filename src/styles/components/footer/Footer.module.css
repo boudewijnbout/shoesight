@@ -101,7 +101,7 @@
 /*--------------------------------------------------------------
 # Media querys
 --------------------------------------------------------------*/
-@media (min-width: 32rem) {
+@media (min-width: 40rem) {
   .copyright {
     flex-direction: row;
     justify-content: space-between;
