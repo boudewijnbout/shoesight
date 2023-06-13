@@ -1,7 +1,11 @@
 import { PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
-import styles from "../../styles/slices/funstuffSlice.module.css";
+
+// Components
 import Label from "@/components/Label";
+
+// Styles
+import styles from "@/styles/slices/FunstuffSlice.module.css";
 
 /**
  * @typedef {import("@prismicio/client").Content.FunstuffSliceSlice} FunstuffSliceSlice
