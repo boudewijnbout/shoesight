@@ -1,12 +1,12 @@
 import { PrismicRichText } from "@prismicio/react";
-import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
+import { PrismicNextImage } from "@prismicio/next";
+import Link from "next/link";
 
 // Styles
 import styles from "../../styles/slices/nieuwSlice.module.css";
 
 // Components
 import Label from "@/components/Label";
-import Link from "next/link";
 
 /**
  * @typedef {import("@prismicio/client").Content.NieuwSliceSlice} NieuwSliceSlice
