@@ -2,7 +2,7 @@
 # Dropdown menu
 --------------------------------------------------------------*/
 .dropdownBtn {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-poppins);
   font-size: 1rem;
   color: var(--black);
 }
