@@ -5,6 +5,7 @@
     justify-content: center;
     max-width: 65rem;
     margin: 10rem auto 0 auto;
+    border-top: none;
 }
 
 .nieuwDetail h3 {
