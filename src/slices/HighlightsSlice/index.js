@@ -1,7 +1,11 @@
 import { PrismicRichText } from "@prismicio/react";
-import styles from "../../styles/slices/highlightsSlice.module.css";
-import HighlightArticleLarge from "@/components/HighlightArticleLarge";
 import { PrismicNextImage } from "@prismicio/next";
+
+// Components
+import HighlightArticleLarge from "@/components/highlightArticleLarge";
+
+// Styles
+import styles from "@/styles/slices/highlightsSlice.module.css";
 
 /**
  * @typedef {import("@prismicio/client").Content.NieuwSliceSlice} NieuwSliceSlice

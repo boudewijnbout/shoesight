@@ -3,7 +3,7 @@ import { PrismicNextImage } from "@prismicio/next";
 import Link from "next/link";
 
 // Styles
-import styles from "../../styles/slices/nieuwSlice.module.css";
+import styles from "@/styles/slices/nieuwSlice.module.css";
 
 // Components
 import Label from "@/components/Label";

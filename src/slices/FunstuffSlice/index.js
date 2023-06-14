@@ -5,7 +5,7 @@ import { PrismicNextImage } from "@prismicio/next";
 import Label from "@/components/Label";
 
 // Styles
-import styles from "@/styles/slices/FunstuffSlice.module.css";
+import styles from "@/styles/slices/funstuffSlice.module.css";
 
 /**
  * @typedef {import("@prismicio/client").Content.FunstuffSliceSlice} FunstuffSliceSlice
