@@ -1,6 +1,5 @@
+// Styles
 import styles from "@/styles/components/header/Dropdown.module.css";
-
-import { useState, useEffect } from "react";
 
 const Dropdown = ({ children, title, openDropdown, setOpenDropdown }) => {
   const isOpen = openDropdown === title;  

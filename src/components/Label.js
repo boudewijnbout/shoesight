@@ -1,3 +1,4 @@
+// Styles
 import styles from "../styles/components/Label.module.css";
 
 const Label = ({ title }) => {

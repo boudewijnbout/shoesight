@@ -17,8 +17,11 @@ const FunstuffSlice = ({ slice }) => {
 
   return (
     <section className={styles.section}>
+
+      {/* Slice title */}
       <PrismicRichText field={slice.primary.title} />
 
+      {/* Articles */}
       <div className={styles.funstuffContainer}>
         {articles.map((article) => {
           return (

@@ -2,7 +2,7 @@
 import FooterNavItem from "./FooterNavItem";
 
 // Styles
-import styles from "../../styles/components/footer/FooterNavMenu.module.css";
+import styles from "@/styles/components/footer/FooterNavMenu.module.css";
 
 const FooterNavMenu = () => {
     return (

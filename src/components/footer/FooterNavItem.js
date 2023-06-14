@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 // Styles
-import styles from "../../styles/components/footer/FooterNavItem.module.css"
+import styles from "@/styles/components/footer/FooterNavItem.module.css"
 
 const FooterNavItem = ({ linkUrl, title }) => {
   return (
