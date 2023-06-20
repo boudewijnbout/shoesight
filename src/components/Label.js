@@ -1,11 +1,7 @@
 // Styles
 import styles from "../styles/components/Label.module.css";
 
-interface LabelProps {
-    title: string,
-}
-
-const Label = ({ title }: LabelProps) => {
+const Label = ({ title }) => {
     return (
         <span className={styles.label}>{title}</span>
     )

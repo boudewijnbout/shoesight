@@ -3,12 +3,7 @@ import { PrismicNextImage } from "@prismicio/next";
 // Styles
 import styles from "@/styles/components/HighlightArticleLarge.module.css";
 
-interface HighlightArticleLargeProps {
-    imageUrl: string,
-    label: string,
-}
-
-const HighlightArticleLarge = ({ imageUrl, label }: HighlightArticleLargeProps) => {
+const HighlightArticleLarge = ({ imageUrl, label }) => {
     return (
         <>
             <div className={styles.highlightArticle}>

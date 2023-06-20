@@ -1,6 +1,6 @@
 // Components
 import FooterNavMenu from "./FooterNavMenu";
-import SocialMediaIcons from "../SocialMediaIcons";
+import SocialMediaIcons from "../../components/SocialMediaIcons";
 
 // Styles
 import styles from "@/styles/components/footer/Footer.module.css";

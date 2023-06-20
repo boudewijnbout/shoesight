@@ -1,16 +1,7 @@
 // Styles
 import styles from "@/styles/components/header/Dropdown.module.css";
 
-import { ReactNode } from "react";
-
-interface DropdownProps {
-  children: ReactNode,
-  title: string,
-  openDropdown: string,
-  setOpenDropdown: (openDropdown: string | null) => void,
-}
-
-const Dropdown = ({ children, title, openDropdown, setOpenDropdown }: DropdownProps) => {
+const Dropdown = ({ children, title, openDropdown, setOpenDropdown }) => {
   const isOpen = openDropdown === title;  
 
   const toggleDropdown = () => {

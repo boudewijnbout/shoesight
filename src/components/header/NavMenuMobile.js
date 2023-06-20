@@ -9,12 +9,8 @@ import SearchBar from "./Searchbar";
 // Styles
 import styles from "@/styles/components/header/NavMenuMobile.module.css";
 
-interface NavMenuMobileProps {
-  open: boolean,
-}
-
-const NavMenuMobile = ({ open }: NavMenuMobileProps) => {
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+const NavMenuMobile = ({ open }) => {
+  const [openDropdown, setOpenDropdown] = useState(null);
   
   return (
     <>
@@ -24,7 +20,7 @@ const NavMenuMobile = ({ open }: NavMenuMobileProps) => {
 
           {/* Nieuw link + dropdown */}
           <li className={styles.navMenuMobileItem}>
-            <Dropdown title="Nieuw" openDropdown={openDropdown as string} setOpenDropdown={setOpenDropdown}>
+            <Dropdown title="Nieuw" openDropdown={openDropdown} setOpenDropdown={setOpenDropdown}>
               <DropdownItem linkUrl="/" title="trends" />
               <DropdownItem linkUrl="/" title="brands" />
             </Dropdown>
@@ -32,7 +28,7 @@ const NavMenuMobile = ({ open }: NavMenuMobileProps) => {
 
           {/* Fun stuff link + dropdown */}
           <li className={styles.navMenuMobileItem}>
-            <Dropdown title="Fun stuff" openDropdown={openDropdown as string} setOpenDropdown={setOpenDropdown}>
+            <Dropdown title="Fun stuff" openDropdown={openDropdown} setOpenDropdown={setOpenDropdown}>
               <DropdownItem linkUrl="/" title="top 10" />
               <DropdownItem linkUrl="/" title="facts & figures" />
               <DropdownItem linkUrl="/" title="flashback" />
@@ -41,7 +37,7 @@ const NavMenuMobile = ({ open }: NavMenuMobileProps) => {
 
           {/* Highlights link + dropdown */}
           <li className={styles.navMenuMobileItem}>
-            <Dropdown title="Highlights" openDropdown={openDropdown as string} setOpenDropdown={setOpenDropdown}>
+            <Dropdown title="Highlights" openDropdown={openDropdown} setOpenDropdown={setOpenDropdown}>
               <DropdownItem linkUrl="/" title="icons" />
               <DropdownItem linkUrl="/" title="shoe of the day" />
               <DropdownItem linkUrl="/" title="media" />
@@ -50,7 +46,7 @@ const NavMenuMobile = ({ open }: NavMenuMobileProps) => {
 
           {/* Over ons link + dropdown */}
           <li className={styles.navMenuMobileItem}>
-            <Dropdown title="Over ons" openDropdown={openDropdown as string} setOpenDropdown={setOpenDropdown}>
+            <Dropdown title="Over ons" openDropdown={openDropdown} setOpenDropdown={setOpenDropdown}>
               <DropdownItem linkUrl="/" title="shoesight" />
               <DropdownItem linkUrl="/" title="ads & collabs" />
               <DropdownItem linkUrl="/" title="contact" />

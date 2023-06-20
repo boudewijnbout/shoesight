@@ -1,11 +1,7 @@
 // Styles
 import styles from "@/styles/components/header/Searchbar.module.css";
 
-interface SearchBarProps {
-    label: string,
-}
-
-const SearchBar = ({ label }: SearchBarProps) => {
+const SearchBar = ({ label }) => {
     return (
         <>
             <form className={styles.searchBar}>
