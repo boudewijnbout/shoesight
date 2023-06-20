@@ -9,7 +9,7 @@ import NavItem from "./NavItem";
 import styles from "@/styles/components/header/NavMenu.module.css";
 
 const NavMenu = () => {
-  const [openDropdown, setOpenDropdown] = useState(null);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
     <>
@@ -19,7 +19,7 @@ const NavMenu = () => {
 
           {/* Nieuw link + dropdown */}
           <li className={styles.navMenuItem}>
-            <Dropdown title="nieuw" openDropdown={openDropdown} setOpenDropdown={setOpenDropdown}>
+            <Dropdown title="nieuw" openDropdown={openDropdown as string} setOpenDropdown={setOpenDropdown}>
               <DropdownItem linkUrl="/" title="trends" />
               <DropdownItem linkUrl="/" title="brands" />
             </Dropdown>
@@ -27,7 +27,7 @@ const NavMenu = () => {
 
           {/* Fun stuff link + dropdown */}
           <li className={styles.navMenuItem}>
-            <Dropdown title="fun stuff" openDropdown={openDropdown} setOpenDropdown={setOpenDropdown}>
+            <Dropdown title="fun stuff" openDropdown={openDropdown as string} setOpenDropdown={setOpenDropdown}>
               <DropdownItem linkUrl="/" title="top 10" />
               <DropdownItem linkUrl="/" title="facts & figures" />
               <DropdownItem linkUrl="/" title="flashback" />
@@ -36,7 +36,7 @@ const NavMenu = () => {
 
           {/* Highlights link + dropdown */}
           <li className={styles.navMenuItem}>
-            <Dropdown title="highlights" openDropdown={openDropdown} setOpenDropdown={setOpenDropdown}>
+            <Dropdown title="highlights" openDropdown={openDropdown as string} setOpenDropdown={setOpenDropdown}>
               <DropdownItem linkUrl="/" title="icons" />
               <DropdownItem linkUrl="/" title="shoe of the day" />
               <DropdownItem linkUrl="/" title="media" />
@@ -45,7 +45,7 @@ const NavMenu = () => {
 
           {/* Over ons link + dropdown */}
           <li className={styles.navMenuItem}>
-            <Dropdown title="over ons" openDropdown={openDropdown} setOpenDropdown={setOpenDropdown}>
+            <Dropdown title="over ons" openDropdown={openDropdown as string} setOpenDropdown={setOpenDropdown}>
               <DropdownItem linkUrl="/" title="shoesight" />
               <DropdownItem linkUrl="/" title="ads & collabs" />
               <DropdownItem linkUrl="/" title="contact" />

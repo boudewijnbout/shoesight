@@ -3,8 +3,12 @@ import { createClient } from "../../prismicio";
 import { components } from "../slices";
 import Head from "next/head";
 
-const Page = ({ page, metaTitle, metaDescription }) => {
-  return (
+import { GetStaticPropsContext, InferGetStaticPropsType } from "next";
+
+type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
+
+const Page = ({ page, metaTitle, metaDescription }: PageProps) => {
+    return (
     <>
       <Head>
         <title>{metaTitle}</title>
@@ -20,7 +24,7 @@ const Page = ({ page, metaTitle, metaDescription }) => {
 
 export default Page;
 
-export async function getStaticProps({ previewData }) {
+export async function getStaticProps({ previewData }: GetStaticPropsContext) {
   const client = createClient({ previewData });
   const page = await client.getByUID("homepage", "homepage", {
     fetchLinks: [

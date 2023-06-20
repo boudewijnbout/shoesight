@@ -1,6 +1,11 @@
 import Link from "next/link";
 
-const DropdownItem = ({ linkUrl, title }) => {
+interface DropdownItemProps {
+    linkUrl: string,
+    title: string,
+}
+
+const DropdownItem = ({ linkUrl, title }: DropdownItemProps) => {
     return (
         <li>
             <Link href={linkUrl}>{title}</Link>
