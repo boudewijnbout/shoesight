@@ -1,57 +1,52 @@
 import { PrismicNextImage } from "@prismicio/next";
+import { asText } from "@prismicio/helpers";
+import * as prismicH from "@prismicio/helpers";
 import { createClient } from "../../../prismicio";
 import { PrismicRichText } from "@prismicio/react";
+import { GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import Link from "next/link";
+import Head from "next/head";
+import { format, formatRelative } from "date-fns";
 
 // Components
 import Label from "@/components/Label";
 
 // Styles
-import styles from "../../styles/pages/nieuwDetail.module.css";
-import Head from "next/head";
+import styles from "@/styles/pages/nieuwDetail.module.css";
 
-const Page = ({ page }) => {
-    const article = page.data;
-    const publishDate = page.data.publishdate;
-    const date = new Date(publishDate);
+type NieuwArticleProps = InferGetStaticPropsType<typeof getStaticProps>;
 
-    const publishDateOptions = {
-        weekday: 'long',
-        day: 'numeric',
-        month: 'long',
-    };
-
-    // Format publish date to NL format
-    const formattedPublishDate = date.toLocaleString('nl-NL', publishDateOptions);
-
+const Page = ({ nieuwArticle }: NieuwArticleProps) => {    
+    const date = prismicH.asDate(nieuwArticle.data.publishdate ? nieuwArticle.data.publishdate : undefined);
+        
     return (
         <>
             <Head>
-                <title>{article.title[0].text}</title>
-                <meta name="description" content={article.shortdescription[0].text} />
+                <title>{asText(nieuwArticle.data.title)}</title>
+                <meta name="description" content={asText(nieuwArticle.data.shortdescription)} />
             </Head>
 
             <main>
 
                 {/* Nieuw detail article */}
                 <section className={styles.nieuwDetail}>
-                    <article className={styles.nieuwDetailArticle}>
-                        <h3>{article.title[0].text}</h3>
+                      <article className={styles.nieuwDetailArticle}>
+                        <h3>{asText(nieuwArticle.data.title)}</h3>
 
                         <div className={styles.publishInformation}>
                             publisher
-                            <p>{formattedPublishDate}</p>
+                            <p>{date && format(date, "dd/MM/yyy")}</p>
                         </div>
 
                         <picture>
-                            <PrismicNextImage priority field={article.featuredimage} />
-                            <Label title={article.label[0].text} />
+                            <PrismicNextImage priority field={nieuwArticle.data.featuredimage} />
+                            <Label title={asText(nieuwArticle.data.label)} />
                         </picture>
 
                         <div className={styles.nieuwDetailBody}>
-                            <p className={styles.introduction}>{article.introduction[0].text}</p>
-                            <PrismicRichText field={article.body} />
-                        </div>
+                            <p className={styles.introduction}>{asText(nieuwArticle.data.introduction)}</p>
+                            <PrismicRichText field={nieuwArticle.data.body} />
+                        </div> 
                     </article>
 
                     <hr />
@@ -61,10 +56,10 @@ const Page = ({ page }) => {
                         <h4>gerelateerde artikelen</h4>
 
                         <div>
-                            {article.relatedarticles.map((relatedArticle) => {
+                            {nieuwArticle.data.relatedarticles.map((relatedArticle) => {                                     
                                 return (
                                     <>
-                                        <Link href={`/nieuw/${relatedArticle.articlelink.data.uid}`}>
+                                        <Link href={`/nieuw/${relatedArticle.articlelink.uid}`}>
                                             <article>
                                                 <picture>
                                                     <PrismicNextImage field={relatedArticle.articlelink.data.featuredimage} />
@@ -79,25 +74,26 @@ const Page = ({ page }) => {
                                 )
                             })}
                         </div>
-                    </div>
+                    </div> 
                 </section>
             </main>
         </>
     )
 }
 
-export async function getStaticProps({ params }) {
-    const { uid } = params;
+export async function getStaticProps({ params }: GetStaticPropsContext) {    
+    const uid = params?.uid ? params.uid.toString() : "";
     const client = createClient();
-    const page = await client.getByUID("article", uid, {
+
+    const nieuwArticle = await client.getByUID("article", uid, {
         fetchLinks: [
             "article.title, article.featuredimage, article.label, article.shortdescription, article.uid"
         ]
     });
-
+    
     return {
         props: {
-            page,
+            nieuwArticle,
         },
 
         revalidate: 60,

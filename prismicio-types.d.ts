@@ -42,7 +42,7 @@ interface ArticleDocumentData {
    */
   shortdescription: prismicT.RichTextField;
   /**
-   * introduction field in *Article*
+   * introduction field in **
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
